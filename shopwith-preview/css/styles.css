@@ -1,0 +1,4786 @@
+/*
+  Editorial - Shoot
+*/
+
+
+/*
+MatchesFashion.com | Main Stylesheet File
+
+(i) IMPORTANT
+Before modifying this file please read about Atomic Design Pattern
+http://patternlab.io/about.html
+
+(c) 2014 MatchesFashion.com
+*/
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus {
+    outline-color: transparent;
+    outline-style: none;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.yCmsContentSlot {
+    zoom: 1;
+}
+
+.yCmsContentSlot:before,
+.yCmsContentSlot:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.yCmsContentSlot:after {
+    clear: both;
+}
+
+.selecter .no--arrow:after {
+    display: none !important;
+}
+
+.hidden,
+.notVisible {
+    display: none;
+}
+
+.underline {
+    border-bottom: solid 1px black;
+    display: inline-block;
+}
+
+.visible-mobile {
+    display: none;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .visible-mobile {
+        display: block !important;
+    }
+}
+
+.visible-tablet {
+    display: none;
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .visible-tablet {
+        display: block !important;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .hidden-mobile {
+        display: none !important;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .hidden-tablet {
+        display: none !important;
+    }
+}
+
+@media (min-width: 61.3125em) and (max-width: 90em) {
+    .hidden-desktop {
+        display: none !important;
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .hidden-desktop-large {
+        display: none !important;
+    }
+}
+
+
+/* @import "sass/visibility";
+@import "sass/atoms/global/animations"; */
+
+.grid-container {
+    max-width: 93.33%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-container::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+@media (min-width: 42.5625em) {
+    .grid-container {
+        max-width: 95.89%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .grid-container::after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .grid-container {
+        max-width: 97.02%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .grid-container::after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .grid-container {
+        max-width: 109.88%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 97.2%;
+    }
+    .grid-container::after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
+
+@media (min-width: 120em) {
+    .grid-container {
+        max-width: 168.3%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 97.2%;
+    }
+    .grid-container::after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
+
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    line-height: inherit;
+}
+
+a:hover,
+a:focus {
+    color: black;
+}
+
+a img {
+    border: none;
+}
+
+p {
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 1rem;
+    text-rendering: optimizeLegibility;
+}
+
+p aside {
+    font-size: 11px;
+    line-height: 1.35;
+    font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Chronicle Display A", "Chronicle Display B", serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #222;
+    text-rendering: optimizeLegibility;
+    margin-top: 1rem;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+    font-size: 10px;
+    color: #6f6f6f;
+    line-height: 0;
+}
+
+h1 {
+    font-size: 48px;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.6875rem;
+}
+
+h3 {
+    font-size: 1.375rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+h5 {
+    font-size: 1.125rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+hr {
+    border: solid #ddd;
+    border-width: 1px 0 0;
+    clear: both;
+    margin: 1.25rem 0 1.1875rem;
+    height: 0;
+}
+
+em,
+i {
+    font-style: italic;
+    line-height: inherit;
+}
+
+strong,
+b {
+    font-weight: bold;
+    line-height: inherit;
+}
+
+small {
+    font-size: 10px;
+    line-height: inherit;
+}
+
+ul,
+ol,
+dl {
+    font-size: 1rem;
+    list-style-position: outside;
+    font-family: inherit;
+}
+
+ul.no-bullet {
+    margin-left: 0;
+}
+
+ul.no-bullet li ul,
+ul.no-bullet li ol {
+    list-style: none;
+}
+
+ul li ul,
+ul li ol {
+    margin-bottom: 0;
+}
+
+ul.square li ul,
+ul.circle li ul,
+ul.disc li ul {
+    list-style: inherit;
+}
+
+ul.square {
+    list-style-type: square;
+    margin-left: 1.1rem;
+}
+
+ul.circle {
+    list-style-type: circle;
+    margin-left: 1.1rem;
+}
+
+ul.disc {
+    list-style-type: disc;
+    margin-left: 1.1rem;
+}
+
+ul.no-bullet {
+    list-style: none;
+}
+
+ol {
+    margin-left: 1.4rem;
+}
+
+dl dt {
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+dl dd {
+    margin-bottom: 0.75rem;
+}
+
+abbr,
+acronym {
+    text-transform: uppercase;
+    font-size: 90%;
+    color: #000;
+    border-bottom: 1px dotted #ddd;
+}
+
+abbr {
+    text-transform: none;
+}
+
+blockquote {
+    margin: 0 0 14px;
+    padding: 0.5625rem 1.25rem 0 1.1875rem;
+    border-left: 1px solid #ddd;
+}
+
+blockquote cite {
+    display: block;
+    font-size: 0.8125rem;
+    color: #555555;
+}
+
+blockquote cite:before {
+    content: "\2014 \0020";
+}
+
+blockquote cite a,
+blockquote cite a:visited {
+    color: #555555;
+}
+
+blockquote,
+blockquote p {
+    line-height: 1.6;
+    color: #6f6f6f;
+}
+
+.vcard {
+    display: inline-block;
+}
+
+.vcard li {
+    margin: 0;
+    display: block;
+}
+
+.vevent abbr {
+    cursor: default;
+    border: none;
+}
+
+.chronicle-display-black,
+.lister__item__title,
+.size-guide-heading,
+.size-guide-sub-heading,
+.size-guide-designer,
+.chronicle-display-bold,
+.size-guide-price,
+.chronicle-display-semibold,
+.section-title-box,
+.headline-title-box,
+.chronicle-display-roman,
+.lead-title-box,
+.size-guide-description,
+.chronicle-display-light {
+    font-family: "Chronicle Display A", "Chronicle Display B", serif;
+}
+
+.helvetica-neue-regular,
+.breadcrumbs,
+.applyed-filters a,
+.filter__box__item,
+.pager,
+.size-guide-label,
+.size-guide-contact a {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    line-height: 18px;
+}
+
+.helvetica-neue-bold,
+.link-generic__14_upper,
+.link-generic__14_lower,
+.link-generic__12_upper,
+.link-generic__12_lower,
+.applyed-filters,
+.pager a.selectd,
+.size-guide-form-label,
+.size-guide-type,
+.size-guide-contact span {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+}
+
+.chronicle-display-black,
+.lister__item__title,
+.size-guide-heading,
+.size-guide-sub-heading,
+.size-guide-designer {
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    font-weight: 900;
+}
+
+.chronicle-display-bold,
+.size-guide-price {
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    font-weight: 700;
+}
+
+.chronicle-display-semibold,
+.section-title-box,
+.headline-title-box {
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    font-weight: 400;
+}
+
+.chronicle-display-roman,
+.lead-title-box,
+.size-guide-description {
+    text-rendering: optimizeLegibility;
+    font-weight: 300;
+}
+
+.chronicle-display-light {
+    font-weight: 200;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+
+.georgia,
+.lister__item__details,
+.lister__item__price,
+.size-guide-list {
+    font-family: 'Georgia', serif;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+}
+
+.georgia-regular {
+    font-family: 'Georgia Regular', serif;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+}
+
+.right-arrow__14_wb-icn {
+    font-family: 'webdings';
+    font-size: 14px;
+}
+
+.right-arrow__12_wb-icn {
+    font-family: 'webdings';
+    font-size: 14px;
+}
+
+.section-title-box {
+    text-transform: none;
+    font-size: 12px;
+}
+
+.headline-title-box {
+    font-size: 20px;
+}
+
+.lead-title-box {
+    font-size: 14px;
+    text-transform: none;
+}
+
+.link-generic__14_upper {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.link-generic__14_lower {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.link-generic__12_upper {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.link-generic__12_lower {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.breadcrumbs {
+    color: #ccc;
+    font-size: 10px;
+}
+
+.applyed-filters {
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.applyed-filters a {
+    text-transform: none;
+    font-size: 11.6px;
+}
+
+.lister__item__title {
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+
+.lister__item__details,
+.lister__item__price {
+    font-size: 12px;
+    color: #333333;
+    text-rendering: optimizeLegibility;
+}
+
+.filter__box__item {
+    font-size: 12px;
+}
+
+.pager {
+    font-size: 12px;
+}
+
+.size-guide-heading {
+    display: block;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 3px solid #000;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    clear: both;
+}
+
+.size-guide-sub-heading {
+    display: block;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: left;
+    border-top: 3px solid #000;
+    margin-top: 30px;
+    padding-top: 26px;
+    padding-bottom: 20px;
+    clear: both;
+}
+
+.size-guide-designer {
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.size-guide-description {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.size-guide-price {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.size-guide-form-label {
+    text-transform: uppercase;
+    font-size: 11px;
+    text-align: left;
+}
+
+.size-guide-label {
+    font-size: 11px;
+    text-align: left;
+    margin-left: 20px;
+    text-transform: none;
+}
+
+.size-guide-type {
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.size-guide-list {
+    font-size: 11px;
+    line-height: 16px;
+    text-align: left;
+}
+
+.size-guide-list:last-of-type {
+    margin-bottom: 20px;
+}
+
+.size-guide-contact {
+    clear: both;
+    margin-top: 20px;
+}
+
+.size-guide-contact span {
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.size-guide-contact a {
+    font-size: 11px;
+    text-align: left;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+textarea:focus,
+input:focus,
+input[type]:focus,
+.uneditable-input:focus {
+    box-shadow: none;
+    outline: 0 none;
+}
+
+textarea:focus.error,
+input:focus.error,
+input[type]:focus.error,
+.uneditable-input:focus.error {
+    outline: 0 none;
+}
+
+input::-webkit-input-placeholder {
+    color: #999999;
+    display: block;
+    letter-spacing: 1px;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: gray;
+}
+
+input:-moz-placeholder {
+    color: #999999;
+    display: block;
+    letter-spacing: 1px;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+}
+
+input:focus:-moz-placeholder {
+    color: gray;
+}
+
+input::-moz-placeholder {
+    color: #999999;
+    display: block;
+    letter-spacing: 1px;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+}
+
+input:focus::-moz-placeholder {
+    color: gray;
+}
+
+input:-ms-input-placeholder {
+    color: #999999;
+    display: block;
+    letter-spacing: 1px;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+}
+
+input:focus:-ms-input-placeholder {
+    color: gray;
+}
+
+input.error {
+    border: 1px solid red !important;
+}
+
+input {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    display: block;
+    letter-spacing: 0px;
+    font: 300 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    width: 100%;
+    padding: 0 8px;
+    color: #000;
+    margin-bottom: 14px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+input:focus {
+    color: #000;
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+label {
+    display: block;
+    font-size: 10px;
+    padding-bottom: 0px;
+}
+
+label.error {
+    padding-bottom: 12px;
+}
+
+small {
+    display: block;
+}
+
+.button {
+    font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    text-align: center;
+    letter-spacing: 1px;
+    text-rendering: optimizeLegibility;
+    color: #fff !important;
+    border: none;
+    background-color: #000;
+    box-sizing: border-box;
+    float: right;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #000 !important;
+    border: 1px solid #000;
+}
+
+.button-white {
+    font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    text-align: center;
+    letter-spacing: 1px;
+    text-rendering: optimizeLegibility;
+    color: #000 !important;
+    border: 1px solid #000;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.button-white:hover {
+    background-color: #000;
+    color: #fff !important;
+    border: 1px solid #000;
+}
+
+.error {
+    color: red;
+}
+
+.required {
+    font-size: 10px;
+    padding-bottom: 12px;
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #fff !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+input::-webkit-input-placeholder {
+    color: #999999;
+    letter-spacing: 10px;
+}
+
+input:-moz-placeholder {
+    color: #999999;
+    letter-spacing: 1px;
+}
+
+input::-moz-placeholder {
+    color: #999999;
+    letter-spacing: 1px;
+}
+
+input:-ms-input-placeholder {
+    color: #999999;
+    letter-spacing: 1px;
+}
+
+.blackOutline {
+    border-color: #000 !important;
+}
+
+.placeholder {
+    color: #999999 !important;
+    letter-spacing: 1px;
+}
+
+.btn {
+    background-color: #fff;
+    border: solid 1px #000;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    height: 40px;
+    line-height: 39px;
+    padding: 0 2em;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #000;
+    border: solid 1px #000;
+    color: #fff;
+}
+
+.btn--default {
+    background-color: #fff;
+    border: solid 1px #000;
+    color: #000;
+}
+
+.btn--default:hover {
+    background-color: #000;
+    border: solid 1px #000;
+    color: #fff;
+}
+
+.btn--primary {
+    background-color: #000;
+    border: solid 1px #000;
+    color: #fff;
+}
+
+.btn--primary:hover {
+    background-color: #fff;
+    border: solid 1px #000;
+    color: #000;
+}
+
+.halves .btn {
+    float: left;
+    width: 50%;
+    padding: 0;
+    border-left: none;
+}
+
+.halves .btn:nth-child(2n+0) {
+    border-right: none;
+}
+
+.mfp-container {
+    padding: 0;
+}
+
+.mfp-wrap .mfp-content {
+    max-width: 97.02%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mfp-wrap .mfp-content::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+@media (min-width: 0em) {
+    .mfp-wrap .mfp-content {
+        max-width: 93.33%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mfp-wrap .mfp-content::after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
+
+@media (min-width: 42.5625em) {
+    .mfp-wrap .mfp-content {
+        max-width: 95.89%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mfp-wrap .mfp-content::after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .mfp-wrap .mfp-content {
+        max-width: 97.02%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mfp-wrap .mfp-content::after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
+
+.sail-thru-popup-modal {
+    position: relative;
+    border: 1px solid #ededed;
+    background: #fff;
+    margin: 20px auto;
+    overflow: auto;
+}
+
+.sail-thru-popup-modal__header h2 {
+    /* */
+}
+
+.sail-thru-popup-modal .mfp-close {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 18px;
+    top: 18px;
+    padding: 0;
+    background: url(http://127.0.0.1:5777/images/svg/mf-icn-close.svg) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.sail-thru-popup-modal .mfp-close:active {
+    top: 18px;
+}
+
+@media (min-width: 0em) {
+    .sail-thru-popup-modal {
+        width: 300px;
+        padding: 44px 20px 60px;
+    }
+    .sail-thru-popup-modal__header h2 {
+        display: block;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 22px;
+        text-align: center;
+        text-rendering: optimizeLegibility;
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width: 42.5625em) {
+    .sail-thru-popup-modal {
+        width: 760px;
+        padding: 40px 2.32558% 40px;
+    }
+    .sail-thru-popup-modal__header h2 {
+        margin-bottom: -8.5px;
+        margin-top: -8.5px;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 34px;
+        text-align: center;
+        text-rendering: optimizeLegibility;
+        text-transform: uppercase;
+        margin-top: -4px;
+        margin-bottom: auto;
+    }
+    .sail-thru-popup-modal__header h2:before {
+        content: '';
+        display: block;
+        height: 17px;
+        margin-bottom: -17px;
+        border-bottom: 1px solid #ccc;
+    }
+    .sail-thru-popup-modal__header h2 span {
+        background-color: #fff;
+        padding: 0 2.43902%;
+    }
+    .sail-thru-popup-modal .mfp-close:before {
+        margin-bottom: -2.25px;
+        margin-top: -2.25px;
+        font: 300 9px/11px Helvetica Neue, Helvetica, Arial, sans-serif;
+        text-rendering: optimizeLegibility;
+        text-transform: uppercase;
+        content: 'Close';
+        position: absolute;
+        top: 7px;
+        right: 25px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .sail-thru-popup-modal {
+        width: 804.7619px;
+        padding: 40px 1.5873% 40px;
+    }
+    .sail-thru-popup-modal__header h2 {
+        margin-bottom: -8.5px;
+        margin-top: -8.5px;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 34px;
+        text-align: center;
+        text-rendering: optimizeLegibility;
+        text-transform: uppercase;
+        margin-top: -4px;
+        margin-bottom: auto;
+    }
+    .sail-thru-popup-modal__header h2:before {
+        content: '';
+        display: block;
+        height: 17px;
+        margin-bottom: -17px;
+        border-bottom: 1px solid #ccc;
+    }
+    .sail-thru-popup-modal__header h2 span {
+        background-color: #fff;
+        padding: 0 2.7027%;
+    }
+    .sail-thru-popup-modal__header .modal__subtitle {
+        margin-bottom: -7.5px;
+        margin-top: -7.5px;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 48px;
+        text-align: center;
+        text-rendering: optimizeLegibility;
+        text-transform: uppercase;
+    }
+    .sail-thru-popup-modal__header .modal__subtitle:before {
+        height: 15px;
+        margin-bottom: -26px;
+    }
+}
+
+.button__add {
+    font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    text-align: center;
+    letter-spacing: 1px;
+    text-rendering: optimizeLegibility;
+    color: #fff !important;
+    border: none;
+    background-color: #000;
+    box-sizing: border-box;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.button__add:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+@media (min-width: 0em) {
+    .button__add {
+        width: 100%;
+        float: left;
+        clear: both;
+    }
+}
+
+@media (min-width: 42.5625em) {
+    .button__add {
+        clear: both;
+        width: 100%;
+        float: left;
+        clear: both;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .button__add {
+        width: 47.82609%;
+        float: left;
+        margin-right: 4.34783%;
+        clear: both;
+    }
+}
+
+.button__wish-list {
+    font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    text-align: center;
+    letter-spacing: 1px;
+    text-rendering: optimizeLegibility;
+    color: #000 !important;
+    border: 1px solid #000;
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 40px;
+    padding-top: 12px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.button__wish-list:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+@media (min-width: 0em) {
+    .button__wish-list {
+        clear: none;
+        width: 48.21601%;
+        float: left;
+        margin-right: 3.56798%;
+    }
+}
+
+@media (min-width: 42.5625em) {
+    .button__wish-list {
+        clear: both;
+        width: 100%;
+        float: left;
+        clear: both;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .button__wish-list {
+        clear: both;
+        width: 47.82609%;
+        float: left;
+        margin-right: 4.34783%;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+}
+
+.button__look {
+    font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    text-align: center;
+    letter-spacing: 1px;
+    text-rendering: optimizeLegibility;
+    color: #000 !important;
+    border: 1px solid #000;
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 40px;
+    padding-top: 12px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.button__look:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .button__look {
+        width: 48.21601%;
+        float: left;
+        margin-right: 3.56798%;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .button__look {
+        clear: both;
+        width: 100%;
+        float: left;
+        clear: both;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .button__look {
+        width: 47.82609%;
+        float: right;
+        margin-right: 0;
+        margin-bottom: 40px;
+        clear: none;
+    }
+}
+
+.button__checkout-login-cta {
+    font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    text-align: center;
+    letter-spacing: 1px;
+    text-rendering: optimizeLegibility;
+    color: #fff !important;
+    border: none;
+    background-color: #000;
+    box-sizing: border-box;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.button__checkout-login-cta:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+@media (min-width: 0em) {
+    .button__checkout-login-cta {
+        width: 100%;
+        float: left;
+        clear: both;
+    }
+}
+
+@media (min-width: 42.5625em) {
+    .button__checkout-login-cta {
+        clear: both;
+        width: 100%;
+        float: left;
+        clear: both;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .button__checkout-login-cta {
+        width: 47.82609%;
+        float: left;
+        margin-right: 4.34783%;
+        clear: both;
+    }
+}
+
+
+/*
+Shame stylesheet | for temporary hacks and demo purposes only.
+
+(c) 2014 MatchesFashion.com
+*/
+
+
+/* To be added to custom BASE styles
+----------------------------------------------------------------------------- */
+
+a {
+    text-decoration: none;
+}
+
+
+/* related to Sprint 2 demo. To be refactored / removed
+----------------------------------------------------------------------------- */
+
+#page {
+    overflow: hidden;
+}
+
+.demo-logo-menu {
+    background-image: url("http://127.0.0.1:5777/images/mf-logo+menu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 112px;
+    margin-top: 20px;
+}
+
+.demo-logo-menu:hover {
+    opacity: .3;
+}
+
+
+/* Hide Zoom images on PDP.
+----------------------------------------------------------------------------- */
+
+.zoom-image {
+    display: none;
+}
+
+.row {
+    clear: both;
+    width: 100%;
+    float: left;
+}
+
+.control-group {
+    clear: both;
+    width: 100%;
+    float: left;
+}
+
+
+/* Hide Me to hide things quickly */
+
+.hideme {
+    display: none;
+}
+
+
+/* PDP */
+
+@media (min-width: 42.563em) {
+    .button__add {
+        margin-top: 25px;
+        margin-bottom: 0px;
+        height: 41px;
+    }
+}
+
+
+/* EDITORIAL UTILS */
+
+
+/* @mixin button-editorial($type, $font-size, $line-height, $font-weight, $arrow-size) { */
+
+
+/* %mob_padding {
+    padding-left: 20px;
+    padding-right: 20px;
+} */
+
+
+/* EDITORIAL UTILS */
+
+
+/* EDITORIAL STYLING */
+
+
+/* EDITORIAL UTILS */
+
+
+/* @mixin button-editorial($type, $font-size, $line-height, $font-weight, $arrow-size) { */
+
+
+/* %mob_padding {
+    padding-left: 20px;
+    padding-right: 20px;
+} */
+
+
+/* EDITORIAL UTILS */
+
+.component {
+    border: 2px dotted red !important;
+}
+
+.component > span {
+    color: red;
+    display: block;
+    letter-spacing: 0px;
+    font: 700 18px/18px Chronicle Display A, Chronicle Display B, serif;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .main-menu {
+        width: 100%;
+    }
+}
+
+.edtl-cta {
+    /* @include font($font-family, $font-weight, $font-size, $line-height, 0, center, uppercase); */
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    text-transform: uppercase !important;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    display: block;
+    position: relative;
+    margin-right: 14px;
+    margin-top: 40px;
+    /* margin-bottom: 40px; */
+}
+
+.edtl-cta:after {
+    /* content: '4';
+    font-family: $webdings; */
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-bottom: -5px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.designer_link {
+    font-weight: 700;
+}
+
+.edtl-signup:before {
+    background-image: url("http://assets.matchesfashion.com/content/mf/webassets/editorials/soft_launch_24Nov/images/svg/mf-icn-email.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    height: 10px;
+    margin-right: 10px;
+    width: 17px;
+}
+
+.sail-thru-popup-modal .mfp-close {
+    background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-close.svg") no-repeat;
+    background-size: cover;
+}
+
+.rotateVerticallyBT {
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);
+    /* Internet Explorer */
+    filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+
+/* TOP BAR */
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .editorial_top_bar {
+        margin-right: -3.56798%;
+        margin-left: -3.56798%;
+        padding-right: 3.56798%;
+        padding-left: 3.56798%;
+        padding: 0;
+        border-top: 2px solid #000000;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .editorial_top_bar {
+        border-top: 3px solid #000000;
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 61.3125em) and (max-width: 90em) {
+    .editorial_top_bar {
+        display: none;
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .editorial_top_bar {
+        width: 97.01493%;
+        float: left;
+        margin-right: 1.49254%;
+        margin-left: 1.49254%;
+        border-top: 3px solid #000000;
+    }
+}
+
+
+/* EDITORIAL WRAPPER STYLING */
+
+.editorial_wrapper {
+    /* //global styling for the text throughout the editorial pages
+  @include font($georgia, $regular-weight, 13, 16, 0, left);  */
+}
+
+.editorial_wrapper h2,
+.editorial_wrapper h3,
+.editorial_wrapper h4,
+.editorial_wrapper h5,
+.editorial_wrapper h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.editorial_wrapper li {
+    padding: 0;
+    list-style: none;
+    vertical-align: baseline;
+    display: block;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .editorial_wrapper {
+        clear: both;
+        width: 100%;
+        float: left;
+        zoom: 1;
+        /* padding: 0 20px; */
+        margin-top: 18px;
+    }
+    .editorial_wrapper:before,
+    .editorial_wrapper:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    .editorial_wrapper:after {
+        clear: both;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .editorial_wrapper {
+        clear: both;
+        width: 100%;
+        float: left;
+        zoom: 1;
+        margin-top: 40px;
+    }
+    .editorial_wrapper:before,
+    .editorial_wrapper:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    .editorial_wrapper:after {
+        clear: both;
+    }
+}
+
+@media (min-width: 61.3125em) and (max-width: 90em) {
+    .editorial_wrapper {
+        width: 96.8254%;
+        float: left;
+        margin-right: 1.5873%;
+        margin-left: 1.5873%;
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .editorial_wrapper {
+        width: 73.13433%;
+        float: left;
+        margin-right: 1.49254%;
+        padding-right: 1.49254%;
+        margin-left: 1.49254%;
+        margin-right: 0;
+        max-width: none;
+        zoom: 1;
+    }
+    .editorial_wrapper:before,
+    .editorial_wrapper:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    .editorial_wrapper:after {
+        clear: both;
+    }
+}
+
+.editorial_wrapper figure,
+.editorials_wrapper figure {
+    margin: 0;
+    position: relative;
+}
+
+.editorial_wrapper figure figcaption,
+.editorials_wrapper figure figcaption {
+    display: block;
+    letter-spacing: 0px;
+    font: 300 11px/15px Georgia, serif;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    font-style: italic;
+}
+
+
+/* DESIGNER + SIGN UP CTAs */
+
+.edtl-signup-ctas {
+    text-align: center;
+}
+
+.edtl-signup-ctas a {
+    display: block;
+    margin-top: 0;
+}
+
+.edtl-signup-ctas a:first-child {
+    margin-bottom: 30px;
+}
+
+@media (min-width: 61.3125em) {
+    .edtl-signup-ctas a:first-child {
+        margin-bottom: 18px;
+    }
+}
+
+
+/* FINAL CTA && SHARE BUTTONS */
+
+.edtl-cta-social-wrapper {
+    clear: both;
+    width: 100%;
+    float: left;
+    zoom: 1;
+    text-align: center;
+}
+
+.edtl-cta-social-wrapper:before,
+.edtl-cta-social-wrapper:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.edtl-cta-social-wrapper:after {
+    clear: both;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .edtl-cta-social-wrapper {
+        /* padding: 0px 20px; */
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .edtl-cta-social-wrapper {
+        width: 100%;
+        display: table;
+        /* border-spacing: 15px; //30px (15px*2) space between cta and share */
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .edtl-cta-social-wrapper {
+        /* margin-top: 30px; */
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .edtl-cta-social-wrapper .editorial_cta {
+        margin-top: 10px;
+        height: 40px;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > button {
+        font: 11px "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+        line-height: 17px;
+        font-weight: 500 !important;
+        text-transform: uppercase !important;
+        text-align: center;
+        letter-spacing: 1px;
+        text-rendering: optimizeLegibility;
+        color: #fff !important;
+        border: none;
+        background-color: #000;
+        box-sizing: border-box;
+        height: 40px;
+        position: relative;
+        letter-spacing: 0.05em;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > button:hover {
+        background-color: #fff;
+        color: #000 !important;
+        border: 1px solid #000;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > button:after {
+        /* content: '4';
+          font-family: $webdings; */
+        content: '';
+        width: 11px;
+        height: 11px;
+        position: absolute;
+        top: 50%;
+        margin-top: -5.5px;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-white-right.svg") no-repeat;
+        background-size: contain;
+        display: inline-block;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > button:hover:after {
+        background-image: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") !important;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > a.mfCTA {
+        /* @include font($font-family, $font-weight, $font-size, $line-height, 0, center, uppercase); */
+        font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 17px;
+        text-transform: uppercase !important;
+        text-align: center;
+        text-rendering: optimizeLegibility;
+        display: block;
+        position: relative;
+        margin-right: 11px;
+        background-color: transparent;
+        border: 0 none;
+        display: inline !important;
+        letter-spacing: 0.05em;
+        padding: 0;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > a.mfCTA:after {
+        /* content: '4';
+          font-family: $webdings; */
+        content: '';
+        position: absolute;
+        bottom: 8.5px;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") no-repeat;
+        background-size: contain;
+        display: inline-block;
+        width: 11px;
+        height: 11px;
+        margin-bottom: -6.5px;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > a.editorial_cta__link {
+        font: 11px "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+        line-height: 17px;
+        font-weight: 500 !important;
+        text-transform: uppercase !important;
+        text-align: center;
+        letter-spacing: 1px;
+        text-rendering: optimizeLegibility;
+        color: #fff !important;
+        border: none;
+        background-color: #000;
+        box-sizing: border-box;
+        height: 40px;
+        position: relative;
+        letter-spacing: 0.05em;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 11px;
+        display: inline-block;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > a.editorial_cta__link:hover {
+        background-color: #fff;
+        color: #000 !important;
+        border: 1px solid #000;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > a.editorial_cta__link:after {
+        /* content: '4';
+          font-family: $webdings; */
+        content: '';
+        width: 11px;
+        height: 11px;
+        position: absolute;
+        top: 50%;
+        margin-top: -5.5px;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-white-right.svg") no-repeat;
+        background-size: contain;
+        display: inline-block;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > a.editorial_cta__link:hover:after {
+        background-image: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") !important;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .edtl-cta-social-wrapper .editorial_cta {
+        margin-top: 30px;
+        height: 40px;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > button,
+    .edtl-cta-social-wrapper .editorial_cta > a.mfCTA {
+        font: 11px "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+        line-height: 11px;
+        font-weight: 400 !important;
+        text-transform: uppercase !important;
+        text-align: center;
+        letter-spacing: 1px;
+        text-rendering: optimizeLegibility;
+        color: #fff !important;
+        border: none;
+        background-color: #000;
+        box-sizing: border-box;
+        height: 40px;
+        position: relative;
+        padding-right: 42px;
+        padding-left: 30px;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > button:hover,
+    .edtl-cta-social-wrapper .editorial_cta > a.mfCTA:hover {
+        background-color: #fff;
+        color: #000 !important;
+        border: 1px solid #000;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > button:after,
+    .edtl-cta-social-wrapper .editorial_cta > a.mfCTA:after {
+        /* content: '4';
+          font-family: $webdings; */
+        content: '';
+        width: 11px;
+        height: 11px;
+        position: absolute;
+        top: 50%;
+        margin-top: -5.5px;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-white-right.svg") no-repeat;
+        background-size: contain;
+        display: inline-block;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > button:hover:after,
+    .edtl-cta-social-wrapper .editorial_cta > a.mfCTA:hover:after {
+        background-image: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") !important;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > a.editorial_cta__link {
+        font: 11px "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+        line-height: 11px;
+        font-weight: 400 !important;
+        text-transform: uppercase !important;
+        text-align: center;
+        letter-spacing: 1px;
+        text-rendering: optimizeLegibility;
+        color: #fff !important;
+        border: none;
+        background-color: #000;
+        box-sizing: border-box;
+        height: 40px;
+        position: relative;
+        padding-right: 42px;
+        padding-left: 30px;
+        padding-top: 15px;
+        display: inline-block;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > a.editorial_cta__link:hover {
+        background-color: #fff;
+        color: #000 !important;
+        border: 1px solid #000;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > a.editorial_cta__link:after {
+        /* content: '4';
+          font-family: $webdings; */
+        content: '';
+        width: 11px;
+        height: 11px;
+        position: absolute;
+        top: 50%;
+        margin-top: -5.5px;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-white-right.svg") no-repeat;
+        background-size: contain;
+        display: inline-block;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > a.editorial_cta__link:hover:after {
+        background-image: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") !important;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .edtl-cta-social-wrapper .editorial_cta {
+        display: table-footer-group;
+        height: 30px;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > button,
+    .edtl-cta-social-wrapper .editorial_cta > a.mfCTA {
+        font: 14px "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+        line-height: 19px;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        text-align: center;
+        letter-spacing: 1px;
+        text-rendering: optimizeLegibility;
+        color: #fff !important;
+        border: none;
+        background-color: #000;
+        box-sizing: border-box;
+        height: 30px;
+        position: relative;
+        padding-right: 42px;
+        padding-left: 30px;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > button:hover,
+    .edtl-cta-social-wrapper .editorial_cta > a.mfCTA:hover {
+        background-color: #fff;
+        color: #000 !important;
+        border: 1px solid #000;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > button:after,
+    .edtl-cta-social-wrapper .editorial_cta > a.mfCTA:after {
+        /* content: '4';
+          font-family: $webdings; */
+        content: '';
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 50%;
+        margin-top: -7px;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-white-right.svg") no-repeat;
+        background-size: contain;
+        display: inline-block;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > button:hover:after,
+    .edtl-cta-social-wrapper .editorial_cta > a.mfCTA:hover:after {
+        background-image: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") !important;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > a.editorial_cta__link {
+        font: 14px "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+        line-height: 19px;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        text-align: center;
+        letter-spacing: 1px;
+        text-rendering: optimizeLegibility;
+        color: #fff !important;
+        border: none;
+        background-color: #000;
+        box-sizing: border-box;
+        height: 30px;
+        position: relative;
+        padding-right: 42px;
+        padding-left: 30px;
+        padding-top: 5px;
+        display: inline-block;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > a.editorial_cta__link:hover {
+        background-color: #fff;
+        color: #000 !important;
+        border: 1px solid #000;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > a.editorial_cta__link:after {
+        /* content: '4';
+          font-family: $webdings; */
+        content: '';
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 50%;
+        margin-top: -7px;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-white-right.svg") no-repeat;
+        background-size: contain;
+        display: inline-block;
+    }
+    .edtl-cta-social-wrapper .editorial_cta > a.editorial_cta__link:hover:after {
+        background-image: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") !important;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .edtl-cta-social-wrapper .edtl-share {
+        margin: 30px auto 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #000000;
+    }
+    .edtl-cta-social-wrapper .edtl-share #share_btn {
+        display: none;
+    }
+    .edtl-cta-social-wrapper .edtl-share__link {
+        font: 11px "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+        line-height: 17px;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        text-align: center;
+        letter-spacing: 1px;
+        text-rendering: optimizeLegibility;
+        color: #000 !important;
+        border: 1px solid #000;
+        background-color: #fff;
+        box-sizing: border-box;
+        width: 115px;
+        margin: 0 auto;
+        height: 40px;
+        position: relative;
+        padding-right: 30px;
+    }
+    .edtl-cta-social-wrapper .edtl-share__link:hover {
+        background-color: #000;
+        color: #fff !important;
+        border: 1px solid #000;
+    }
+    .edtl-cta-social-wrapper .edtl-share__link:after {
+        /* content: '4';
+          font-family: $webdings; */
+        content: '';
+        width: 11px;
+        height: 11px;
+        position: absolute;
+        top: 50%;
+        margin-top: -5.5px;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") no-repeat;
+        background-size: contain;
+        display: inline-block;
+    }
+    .edtl-cta-social-wrapper .edtl-share__link:hover:after {
+        background-image: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-white-right.svg") !important;
+    }
+    .edtl-cta-social-wrapper .edtl-share__link:after {
+        content: '';
+        width: 29px;
+        height: 29px;
+        position: absolute;
+        top: 8px;
+        right: 18px;
+        background-image: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-share-icon.svg");
+        background-size: 200%;
+        background-position-x: 0;
+        background-repeat: no-repeat;
+    }
+    .edtl-cta-social-wrapper .edtl-share__link:hover:after {
+        background-image: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-share-icon.svg") !important;
+        background-position-x: -29px;
+    }
+    .edtl-cta-social-wrapper .edtl-share .share-icons {
+        display: none;
+        margin-top: 20px;
+    }
+    .edtl-cta-social-wrapper .edtl-share .share-icons a {
+        width: 44px;
+        height: 44px;
+        margin-left: 11px;
+    }
+    .edtl-cta-social-wrapper .edtl-share .share-icons a:first-child {
+        margin-left: 0;
+    }
+    .edtl-cta-social-wrapper .edtl-share #dummy,
+    .edtl-cta-social-wrapper .edtl-share .dummy-share {
+        display: none;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .edtl-cta-social-wrapper .edtl-share {
+        display: none;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .edtl-cta-social-wrapper .edtl-share {
+        zoom: 1;
+        width: 26.98413%;
+        display: inline-block;
+        position: relative;
+        margin-bottom: 25px;
+    }
+    .edtl-cta-social-wrapper .edtl-share:before,
+    .edtl-cta-social-wrapper .edtl-share:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    .edtl-cta-social-wrapper .edtl-share:after {
+        clear: both;
+    }
+    .edtl-cta-social-wrapper .edtl-share #share_btn_mob,
+    .edtl-cta-social-wrapper .edtl-share .share_btn_mob {
+        display: none;
+    }
+    .edtl-cta-social-wrapper .edtl-share #share_btn,
+    .edtl-cta-social-wrapper .edtl-share .share_btn {
+        background-color: white;
+        height: 20px;
+    }
+    .edtl-cta-social-wrapper .edtl-share__link {
+        display: block;
+        letter-spacing: 0px;
+        font: 700 14px/14px Helvetica Neue, Helvetica, Arial, sans-serif;
+        text-align: center;
+        text-rendering: optimizeLegibility;
+        text-transform: uppercase;
+        text-decoration: underline;
+        display: inline;
+        background-color: transparent;
+        border: 0 none;
+    }
+    .edtl-cta-social-wrapper .edtl-share .share-icons {
+        font-size: 0;
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 35%;
+    }
+    .edtl-cta-social-wrapper .edtl-share .share-icons a {
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+    }
+    .edtl-cta-social-wrapper .edtl-share #dummy,
+    .edtl-cta-social-wrapper .edtl-share .dummy-share {
+        display: none;
+        position: absolute;
+        top: 0;
+        background-color: #FFFFFF;
+        z-index: 2;
+        height: 30px;
+        right: 35%;
+    }
+}
+
+img[usemap] {
+    border: none;
+    height: auto;
+    max-width: 100%;
+    width: auto;
+}
+
+
+/* FOR THE OFFCANVAS FUNCTIONALITY */
+
+#off {
+    zoom: 1;
+}
+
+#off:before,
+#off:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+#off:after {
+    clear: both;
+}
+
+
+/* FOR THE STICKY SIDEBAR ON LARGE DESKTOP */
+
+.is-sticky {
+    position: fixed;
+    border-top: 0;
+    float: none;
+    top: 20px;
+    z-index: 6;
+    left: auto;
+}
+
+
+/* SHOP THE LOOK FUNCTIONALITY (all but shoot) */
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-the-look-wrapper {
+        position: relative;
+    }
+}
+
+.shop-the-look-btn {
+    text-align: center;
+    height: 40px;
+    padding-right: 12px;
+    width: 170px;
+    letter-spacing: 0.05em;
+    z-index: 3;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-the-look-btn {
+        display: block;
+        margin: 20px auto 0px auto;
+        position: relative;
+        font: 11px "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+        line-height: 17px;
+        font-weight: 500 !important;
+        text-transform: uppercase !important;
+        text-align: center;
+        letter-spacing: 1px;
+        text-rendering: optimizeLegibility;
+        color: #fff !important;
+        border: none;
+        background-color: #000;
+        box-sizing: border-box;
+    }
+    .shop-the-look-btn:hover {
+        background-color: #fff;
+        color: #000 !important;
+        border: 1px solid #000;
+    }
+    .shop-the-look-btn:after {
+        /* content: '4';
+        font-family: $webdings; */
+        content: '';
+        width: 11px;
+        height: 11px;
+        position: absolute;
+        top: 50%;
+        margin-top: -5.5px;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-white-right.svg") no-repeat;
+        background-size: contain;
+        display: inline-block;
+    }
+    .shop-the-look-btn:hover:after {
+        background-image: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") !important;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-the-look-btn {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font: 11px "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+        line-height: 17px;
+        font-weight: 500 !important;
+        text-transform: uppercase !important;
+        text-align: center;
+        letter-spacing: 1px;
+        text-rendering: optimizeLegibility;
+        color: #000 !important;
+        border: 1px solid #000;
+        background-color: #fff;
+        box-sizing: border-box;
+    }
+    .shop-the-look-btn:hover {
+        background-color: #000;
+        color: #fff !important;
+        border: 1px solid #000;
+    }
+    .shop-the-look-btn:after {
+        /* content: '4';
+        font-family: $webdings; */
+        content: '';
+        width: 11px;
+        height: 11px;
+        position: absolute;
+        top: 50%;
+        margin-top: -5.5px;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") no-repeat;
+        background-size: contain;
+        display: inline-block;
+    }
+    .shop-the-look-btn:hover:after {
+        background-image: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-white-right.svg") !important;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-the-look-btn {
+        display: none;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .edtl-promos-wrapper .edtl-promos__item__copy__cta::after {
+        margin-bottom: -2px !important;
+        position: relative !important;
+        bottom: 0 !important;
+    }
+}
+
+.cycle-slideshow .cycle-slide,
+.cycle-slideshow picture,
+.cycle-slideshow figure,
+.cycle-slideshow img {
+    width: 100%;
+}
+
+.maps__img__placeholder {
+    display: none !important;
+    pointer-events: none;
+}
+
+@media (min-width: 61.3125em) {
+    .maps__img__placeholder {
+        display: block !important;
+        pointer-events: initial;
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+}
+
+
+/* EDITORIAL STYLING */
+
+@media (min-width: 90.0625em) {
+    .editorial_wrapper {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        float: none;
+    }
+}
+
+picture {
+    display: block !important;
+    margin: 0 0 -4px !important;
+    padding: 0 !important;
+}
+
+img {
+    display: block;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    #back-top {
+        margin-top: 0 !important;
+    }
+}
+
+@media (min-width: 42.5625em) {
+    .fixed .header-wrapper {
+        z-index: 10000;
+    }
+}
+
+.shop-with {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .shop-with {
+        padding: 0 2.985%;
+    }
+}
+
+.shop-with .lineage {
+    text-align: center;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with .lineage {
+        display: none;
+    }
+}
+
+@media (min-width: 42.5625em) {
+    .shop-with .lineage {
+        font: 300 10px/10px Helvetica Neue, Helvetica, Arial, sans-serif;
+        color: #999;
+        margin-top: 14px;
+    }
+    .shop-with .lineage span {
+        font: 300 10px/10px Helvetica Neue, Helvetica, Arial, sans-serif;
+        color: black;
+    }
+    .shop-with .lineage a {
+        font: 300 10px/10px Helvetica Neue, Helvetica, Arial, sans-serif;
+        color: #999;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with .lineage {
+        margin-top: -26px;
+    }
+}
+
+.shop-with h1 {
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.shop-with2 h2 {
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with h1 {
+        border-bottom: 0;
+        padding-bottom: 0;
+        margin-bottom: 20px;
+        font: 700 22px/22px Chronicle Display A, Chronicle Display B, serif;
+        margin-top: -2px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with h1 {
+        font: 700 28px/28px Chronicle Display A, Chronicle Display B, serif;
+        padding-bottom: 15px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with h1 {
+        font: 700 36px/36px Chronicle Display A, Chronicle Display B, serif;
+        padding-bottom: 25px;
+        margin-top: 13px;
+    }
+    .shop-with2 h2 {
+        padding-bottom: 25px;
+        margin-top: 14px;
+    }
+}
+
+@media (min-width: 61.3125em) and (max-width: 90em) {
+    .shop-with h1 {
+        margin-left: 3.28%;
+        margin-right: 3.28%;
+        margin-top: 13px;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with > .bx-wrapper .bx-controls-direction a {
+        top: 25% !important;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with > .bx-wrapper .bx-pager {
+        padding-top: 15px !important;
+    }
+    .shop-with > .bx-wrapper .bx-pager::after {
+        content: "";
+        display: block;
+        width: 67px;
+        height: 3px;
+        position: relative;
+        background-color: black;
+        margin: 15px auto 0;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-influences .bx-wrapper {
+        position: relative;
+    }
+    .shop-with-influences .bx-wrapper:after {
+        content: "";
+        display: block;
+        position: relative;
+        background-color: black;
+        width: 68px;
+        height: 3px;
+        margin: 23px auto 0;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-influences {
+        width: 100%;
+        margin: 30px auto 0;
+        text-align: center;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-influences {
+        width: 100%;
+        max-width: 100%;
+        margin: 36px auto 0;
+        text-align: center;
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .shop-with-influences {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.shop-with-influences a,
+.shop-with-influences > div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-influences a,
+    .shop-with-influences > div {
+        width: 150px;
+        margin: 0 40px 13px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-influences a,
+    .shop-with-influences > div {
+        width: 150px;
+        margin: 0 40px 15px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-influences a,
+    .shop-with-influences > div {
+        width: 160px;
+        margin: 0 25px 15px;
+    }
+    .shop-with-influences a:hover .shop-with-influences-thumbnail img:nth-of-type(2),
+    .shop-with-influences > div:hover .shop-with-influences-thumbnail img:nth-of-type(2) {
+        display: block;
+    }
+}
+
+.shop-with-influences-thumbnail {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-influences-thumbnail {
+        width: 150px;
+        margin-bottom: 4px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-influences-thumbnail {
+        width: 150px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-influences-thumbnail {
+        width: 160px;
+        margin-bottom: 15px;
+    }
+}
+
+.shop-with-influences-thumbnail img {
+    width: 100%;
+}
+
+.shop-with-influences-thumbnail img:nth-of-type(2) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-influences-thumbnail img:nth-of-type(2) {
+        display: none !important;
+    }
+}
+
+.shop-with-influences-name,
+.shop-with-influences-title {
+    display: block;
+    text-align: center;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-influences-name,
+    .shop-with-influences-title {
+        font: italic 300 12px/17px Chronicle Display A, Chronicle Display B, serif;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-influences-name,
+    .shop-with-influences-title {
+        font: italic 300 12px/17px Chronicle Display A, Chronicle Display B, serif;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-influences-name,
+    .shop-with-influences-title {
+        font: italic 300 14px/17px Chronicle Display A, Chronicle Display B, serif;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-influences-title {
+        height: 34px;
+    }
+}
+
+.shop-with-influences > div span.shop-with-influences-thumbnail::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    border-radius: 50%;
+    opacity: 0.75;
+}
+
+@media (min-width: 42.5625em) {
+    .shop-with-influences:after {
+        content: "";
+        display: block;
+        position: relative;
+        background-color: black;
+        width: 150px;
+        height: 3px;
+        margin: 18px auto 0;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-influences:after {
+        width: 240px;
+        height: 3px;
+        margin-top: 6px;
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .shop-with-influences:after {
+        width: 250px;
+    }
+}
+
+.shop-with-first-paragraph {
+    border-bottom: 1px solid black;
+}
+
+.shop-with-first-paragraph p {
+    font: 300 16px/19px Chronicle Display A, Chronicle Display B, serif;
+    text-align: center;
+}
+
+.shop-with-first-paragraph p span {
+    white-space: nowrap;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-first-paragraph {
+        margin-top: 16px;
+        padding-bottom: 28px;
+    }
+    .shop-with-first-paragraph p {
+        font: 300 17px/22px Chronicle Display A, Chronicle Display B, serif;
+        padding: 0;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-first-paragraph {
+        margin-top: 25px;
+        padding-bottom: 28px;
+        border-bottom: none;
+    }
+    .shop-with-first-paragraph p {
+        padding: 0 4.65%;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-first-paragraph {
+        margin-top: 35px;
+        padding-bottom: 38px;
+        margin-left: 3.28%;
+        margin-right: 3.28%;
+    }
+    .shop-with-first-paragraph p {
+        padding: 0 13.493%;;
+    }
+}
+
+@media (min-width: 61.3125em) and (min-width: 90.0625em) {
+    .shop-with-first-paragraph p {
+        padding:0 13.493%;;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-first-paragraph .edtl-cta {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        line-height: 15px;
+        font-size: 12px;
+    }
+    .shop-with-first-paragraph .edtl-cta::before {
+        height: 9px;
+        margin-right: 6px;
+    }
+}
+
+@media (min-width: 61.3125em) and (max-width: 90em) {
+    .shop-with-first-paragraph .edtl-cta {
+        margin-top: 35px;
+    }
+}
+
+.shop-with-three-cols {
+    position: relative;
+    overflow: hidden;
+    clear: both;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-three-cols {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols {
+        margin-top: 45px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols {
+        margin-top: 45px;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(1) * {
+    text-align: right;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-three-cols > div:nth-of-type(1) {
+        display: none;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(1) {
+        width: 34.8837%;
+        min-height: 10px;
+        position: absolute;
+        border-bottom: 24px solid black;
+        border-top: 24px solid black;
+        top: 0;
+        left: 4.6511%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(1) {
+        width: 27.1%;
+        min-height: 10px;
+        position: absolute;
+        border-bottom: 24px solid black;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .shop-with-three-cols > div:nth-of-type(1) {
+        width: 22.2222%;
+        left: 4.7619%;
+    }
+}
+
+@media (min-width: 61.3125em) and (max-width: 90em) {
+    .shop-with-three-cols > div:nth-of-type(1) {
+        left: 1.6393%;
+        width: 26.2295%;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(1) > div {
+        height: 230px;
+    }
+}
+
+@media (min-width: 42.5625em) {
+    .shop-with-three-cols > div:nth-of-type(1) p {
+        font: 300 16px/18px Chronicle Display A, Chronicle Display B, serif;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(1) span.name {
+    display: block;
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(1) span.name {
+        font: italic 300 14px/17px Chronicle Display A, Chronicle Display B, serif;
+        margin-top: 31px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(1) span.name {
+        font: italic 300 14px/17px Chronicle Display A, Chronicle Display B, serif;
+        margin-top: 23px;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(1) span.title {
+    display: block;
+    position: relative;
+}
+
+@media (min-width: 42.5625em) {
+    .shop-with-three-cols > div:nth-of-type(1) span.title {
+        font: italic 300 14px/17px Chronicle Display A, Chronicle Display B, serif;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(1) span.title:after {
+    content: "";
+    position: relative;
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    background-color: black;
+}
+
+@media (min-width: 42.5625em) {
+    .shop-with-three-cols > div:nth-of-type(1) span.title:after {
+        width: 60px;
+        height: 8px;
+        margin-top: 7px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(1) span.title:after {
+        position: absolute;
+        top: -26px;
+        right: 0;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(1) .desktop-only {
+        display: none;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(1) .tablet-only {
+        display: none;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(1) .tablet-only {
+        position: absolute !important;
+        top: 50%;
+        -ms-transform: translate(0%, -50%);
+        -webkit-transform: translate(0%, -50%);
+        -moz-transform: translate(0%, -50%);
+        -o-transform: translate(0%, -50%);
+        transform: translate(0%, -50%);
+        margin-right: 6.6666%;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(2) {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(2) {
+        width: 51.1628%;
+        min-height: 10px;
+        margin-left: 44.186%;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(2) {
+        width: 35.6%;
+        min-height: 10px;
+        margin-left: 30.5%;
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .shop-with-three-cols > div:nth-of-type(2) {
+        margin-left: 31.746%;
+        width: 36.5079%;
+    }
+}
+
+@media (min-width: 61.3125em) and (max-width: 90em) {
+    .shop-with-three-cols > div:nth-of-type(2) {
+        margin-left: 31.1475%;
+        width: 34.4262%;
+    }
+}
+
+@media (min-width: 42.5625em) {
+    .shop-with-three-cols > div:nth-of-type(2) > div {
+        border: 1px solid black;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(2) > div {
+        padding: 0 4.5454%;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(2) > div {
+        padding: 0 4.76%;
+        min-height: 700px;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(2) h2 {
+    text-align: center;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-three-cols > div:nth-of-type(2) h2 {
+        font: 700 20px/20px Chronicle Display A, Chronicle Display B, serif;
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(2) h2 {
+        font: 700 20px/20px Chronicle Display A, Chronicle Display B, serif;
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(2) h2 {
+        font: 700 24px/24px Chronicle Display A, Chronicle Display B, serif;
+        margin-top: 46px;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(2) img {
+    width: 100%;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-three-cols > div:nth-of-type(2) img {
+        padding: 0 10px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(2) img {
+        padding: 0 5%;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(2) img {
+        padding: 0 5.26%;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(2) span {
+    text-align: center;
+    display: block;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-three-cols > div:nth-of-type(2) span {
+        font: italic 300 14px/17px Chronicle Display A, Chronicle Display B, serif;
+        margin-top: 37px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(2) span {
+        font: italic 300 14px/17px Chronicle Display A, Chronicle Display B, serif;
+        margin-top: 53px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(2) span {
+        font: italic 300 14px/17px Chronicle Display A, Chronicle Display B, serif;
+        margin-top: 80px;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(2) a.view-more {
+    display: inline-block;
+    background-color: black;
+    text-align: center;
+    border: 1px solid black;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-three-cols > div:nth-of-type(2) a.view-more {
+        width: 170px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(2) a.view-more {
+        width: 170px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 61.3125em) and (max-width: 90em) {
+    .shop-with-three-cols > div:nth-of-type(2) a.view-more {
+        width: 220px;
+        margin-top: 35px;
+        margin-bottom: 34px;
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .shop-with-three-cols > div:nth-of-type(2) a.view-more {
+        width: 220px;
+        margin-top: 27px;
+        margin-bottom: 34px;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(2) a.view-more span {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 14px;
+    color: white;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-three-cols > div:nth-of-type(2) a.view-more span {
+        font-size: 11px;
+        line-height: 11px;
+        padding: 13px 14px 13px 0;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(2) a.view-more span {
+        font-size: 11px;
+        line-height: 11px;
+        padding: 13px 14px 13px 0;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(2) a.view-more span {
+        padding: 8px 14px 8px 0;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(2) a.view-more span:after {
+    content: "";
+    position: absolute;
+    background: transparent url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-white-right.svg") no-repeat scroll 0 0/contain;
+    right: 0;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-three-cols > div:nth-of-type(2) a.view-more span:after {
+        height: 11px;
+        width: 11px;
+        top: 13px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(2) a.view-more span:after {
+        height: 11px;
+        width: 11px;
+        top: 13px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(2) a.view-more span:after {
+        height: 13px;
+        width: 13px;
+        top: 8px;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(2) a.view-more:hover {
+    background: white;
+}
+
+.shop-with-three-cols > div:nth-of-type(2) a.view-more:hover span {
+    color: black;
+}
+
+.shop-with-three-cols > div:nth-of-type(2) a.view-more:hover span:after {
+    background: transparent url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") no-repeat scroll 0 0/contain;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper {
+        margin-top: 15px;
+    }
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper .bx-pager,
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper .shop-with .bx-wrapper .bx-controls-auto {
+        position: absolute;
+        width: 100%;
+        bottom: 38px;
+    }
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper .bx-controls-direction a {
+        top: 43.5% !important;
+    }
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper .bx-controls-direction a.bx-next {
+        right: 0;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-pdp-small-arrow-right.svg") no-repeat right 0px;
+        width: 32px;
+        height: 32px;
+    }
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper .bx-controls-direction a.bx-prev {
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-pdp-small-arrow-left.svg") no-repeat 0px 0px;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper {
+        margin-top: 15px;
+    }
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper .bx-pager,
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper .shop-with .bx-wrapper .bx-controls-auto {
+        position: absolute;
+        width: 100%;
+        bottom: 46px;
+    }
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper .bx-controls-direction a {
+        top: 43%;
+    }
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper .bx-controls-direction a.bx-next {
+        right: -7%;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-pdp-small-arrow-right.svg") no-repeat 0px 0px;
+        width: 32px;
+        height: 32px;
+    }
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper .bx-controls-direction a.bx-prev {
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-pdp-small-arrow-left.svg") no-repeat 0px 0px;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper {
+        margin-top: 15px;
+    }
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper .bx-pager,
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper .shop-with .bx-wrapper .bx-controls-auto {
+        position: absolute;
+        width: 100%;
+        bottom: 82px;
+    }
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper .bx-controls-direction a {
+        top: 39%;
+    }
+    .shop-with-three-cols > div:nth-of-type(2) .bx-wrapper .bx-controls-direction a.bx-next {
+        right: -7%;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(2):after {
+    content: "";
+    display: block;
+    position: relative;
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(2):after {
+        border-bottom: 3px solid black;
+        height: 5px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(2):after {
+        border-bottom: 3px solid black;
+        height: 4px;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 61.25em) {
+    .shop-with-three-cols > div:nth-of-type(3) {
+        display: none;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(3) {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 28.8%;
+        min-height: 10px;
+        height: 100%;
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .shop-with-three-cols > div:nth-of-type(3) {
+        width: 22.2222%;
+        right: 4.7619%;
+    }
+}
+
+@media (min-width: 61.3125em) and (max-width: 90em) {
+    .shop-with-three-cols > div:nth-of-type(3) {
+        right: 1.6393%;
+        width: 27.8688%;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(3):after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+}
+
+.shop-with-three-cols > div:nth-of-type(3) .hpg-tpl__scroll__headline {
+    background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-style-report-logo.svg") no-repeat left top;
+    background-size: 222px;
+    height: 50px;
+}
+
+.shop-with-three-cols > div:nth-of-type(3) .hpg-tpl__scroll__headline span {
+    display: none;
+}
+
+.shop-with-three-cols > div:nth-of-type(3) .hpg-tpl__scroll__headline h4 {
+    margin: 0px;
+    padding: 0px;
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(3) .shop-with-style-report {
+        position: absolute;
+        top: 6%;
+        left: 0;
+        height: 93.7%;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(3) .shop-with-style-report a {
+    display: block;
+    overflow: hidden;
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(3) .shop-with-style-report a {
+        margin-bottom: 30px;
+    }
+}
+
+.shop-with-three-cols > div:nth-of-type(3) .shop-with-style-report a img {
+    width: 47%;
+    float: left;
+}
+
+.shop-with-three-cols > div:nth-of-type(3) .shop-with-style-report a div {
+    width: 53%;
+    float: right;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+
+.shop-with-three-cols > div:nth-of-type(3) .shop-with-style-report a div span {
+    font: 300 12px/12px Chronicle Display A, Chronicle Display B, serif;
+}
+
+.shop-with-three-cols > div:nth-of-type(3) .shop-with-style-report a div h4 {
+    font: 700 14px/16px Chronicle Display A, Chronicle Display B, serif;
+    padding: 0;
+    margin: 5px 0 3px;
+}
+
+.shop-with-three-cols > div:nth-of-type(3) .shop-with-style-report a div p {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 11px;
+    line-height: 14px;
+}
+
+.shop-with-three-cols > div:nth-of-type(3) .shop-with-style-report a div span.cta {
+    display: block;
+    font: 700 11px/12px Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-top: 3px;
+}
+
+.shop-with-three-cols > div:nth-of-type(3) .shop-with-style-report a div span.cta > span {
+    font: 700 11px/12px Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding-right: 11px;
+    background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") no-repeat;
+    background-size: 11px 11px;
+    background-position: right 2px;
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-three-cols > div:nth-of-type(3) .mCSB_inside > .mCSB_container {
+        margin-right: 15px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-style-report-d-and-m {
+        display: none;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-style-report-d-and-m {
+        border-top: 1px solid black;
+        padding-top: 40px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-style-report-d-and-m {
+        margin-top: 65px;
+        border-bottom: 2px solid black;
+        overflow: hidden;
+        padding-bottom: 0;
+    }
+    .shop-with-style-report-d-and-m .shop-with-style-report {
+        max-height: 315px;
+        overflow: hidden;
+    }
+}
+
+.shop-with-style-report-d-and-m .hpg-tpl__scroll__headline {
+    background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-style-report-logo.svg") no-repeat center top;
+    background-size: 222px;
+    height: 37px;
+}
+
+.shop-with-style-report-d-and-m .hpg-tpl__scroll__headline span {
+    display: none;
+}
+
+.shop-with-style-report-d-and-m .hpg-tpl__scroll__headline h4 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.shop-with-style-report-d-and-m .shop-with-style-report a {
+    display: block;
+    overflow: hidden;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-style-report-d-and-m .shop-with-style-report a {
+        padding: 0 30px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-style-report-d-and-m .shop-with-style-report a {
+        width: 33.3%;
+        float: left;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-style-report-d-and-m .shop-with-style-report a img {
+        width: 47%;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-style-report-d-and-m .shop-with-style-report a img {
+        width: 36%;
+        float: left;
+    }
+}
+
+.shop-with-style-report-d-and-m .shop-with-style-report a div {
+    float: right;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-style-report-d-and-m .shop-with-style-report a div {
+        width: 53%;
+        padding: 0 0 0 20px;
+        margin-top: -4px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-style-report-d-and-m .shop-with-style-report a div {
+        width: 64%;
+        padding: 0 5%;
+        margin-top: -4px;
+    }
+}
+
+.shop-with-style-report-d-and-m .shop-with-style-report a div span {
+    font: 300 12px/12px Chronicle Display A, Chronicle Display B, serif;
+}
+
+.shop-with-style-report-d-and-m .shop-with-style-report a div h4 {
+    font: 700 14px/16px Chronicle Display A, Chronicle Display B, serif;
+    padding: 0;
+    margin: 5px 0 3px;
+}
+
+.shop-with-style-report-d-and-m .shop-with-style-report a div p {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 11px;
+    line-height: 14px;
+    display: none;
+}
+
+.shop-with-style-report-d-and-m .shop-with-style-report a div span.cta {
+    display: block;
+    font: 700 11px/12px Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-top: 3px;
+}
+
+.shop-with-style-report-d-and-m .shop-with-style-report a div span.cta > span {
+    font: 700 11px/12px Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding-right: 11px;
+    background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") no-repeat;
+    background-size: 11px 11px;
+    background-position: right 2px;
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-style-report-d-and-m .shop-with-style-report:last-child {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-style-report-d-and-m .bx-wrapper {
+        margin-top: 10px !important;
+    }
+    .shop-with-style-report-d-and-m .bx-wrapper .bx-controls-direction a {
+        top: 33% !important;
+    }
+}
+
+.shop-with-this-month {
+    overflow: hidden;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-this-month {
+        display: none;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-this-month {
+        margin-top: 75px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-this-month {
+        border-top: 3px solid black;
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 61.3125em) and (max-width: 90em) {
+    .shop-with-this-month {
+        margin-left: 3.28%;
+        margin-right: 3.28%;
+    }
+}
+
+.shop-with-this-month h3 {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-this-month h3 {
+        font: 700 28px/28px Chronicle Display A, Chronicle Display B, serif;
+        margin: 0;
+        padding-bottom: 15px;
+        border-bottom: 1px solid black;
+    }
+}
+
+@media (min-width: 61.3125em) and (max-width: 90em) {
+    .shop-with-this-month h3 {
+        font: 700 24px/24px Chronicle Display A, Chronicle Display B, serif;
+        margin: 16px 0 0;
+        padding-bottom: 16px;
+        border-bottom: 1px solid black;
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .shop-with-this-month h3 {
+        font: 700 36px/36px Chronicle Display A, Chronicle Display B, serif;
+        margin: 23px 0 0;
+        padding-bottom: 23px;
+        border-bottom: 1px solid black;
+    }
+}
+
+.shop-with-this-month > div {
+    position: relative;
+    border-bottom: 1px solid black;
+}
+
+.shop-with-this-month > div > img,
+.shop-with-this-month > div > a {
+    width: 45.614%;
+    display: block;
+}
+
+@media (min-width: 90.0625em) {
+    .shop-with-this-month > div > img,
+    .shop-with-this-month > div > a {
+        width: 34.33%;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-this-month > div > img,
+    .shop-with-this-month > div > a {
+        width: 51.1628%;
+    }
+}
+
+.shop-with-this-month > div > div {
+    width: 54.386%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-this-month > div > div {
+        width: 48.8372%;
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .shop-with-this-month > div > div {
+        width: 65.77%;
+    }
+}
+
+.shop-with-this-month > div > div > div {
+    position: absolute !important;
+    top: 50%;
+    left: 0;
+    -ms-transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    width: 87.1%;
+    left: 6.45%;
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-this-month > div > div > div {
+        left: 9.5238%;
+        width: 80.9524%;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-this-month > div > div > div > img {
+        margin: 0px auto 15px;
+        width: 190px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-this-month > div > div > div > img {
+        margin: 0px auto 15px;
+        width: 200px;
+    }
+}
+
+.shop-with-this-month > div > div > div p {
+    font: 300 16px/18px Chronicle Display A, Chronicle Display B, serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.shop-with-this-month > div > div > div p:after {
+    content: "";
+    display: block;
+    width: 220px;
+    height: 3px;
+    background-color: black;
+    margin: 15px auto 0;
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-this-month > div > div > div p:after {
+        display: none;
+    }
+}
+
+.shop-with-this-month > div > div > div span {
+    display: block;
+    text-align: center;
+    font: italic 300 14px/17px Chronicle Display A, Chronicle Display B, serif;
+    margin-top: 43px;
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-this-month > div > div > div span {
+        display: none;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-this-month span.credit {
+        display: block;
+        text-align: center;
+        font: italic 300 12px/17px Chronicle Display A, Chronicle Display B, serif;
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-this-month span.credit {
+        display: none;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-this-month span.credit {
+        display: none;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-live-feed {
+        margin-top: 40px;
+        border-top: 1px solid black;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-live-feed {
+        margin-top: 20px;
+        width: 105%;
+        margin-left: -2.5%;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-live-feed {
+        margin-top: 55px;
+    }
+}
+
+.shop-with-live-feed h3 {
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-live-feed h3 {
+        font: 700 20px/20px Chronicle Display A, Chronicle Display B, serif;
+        margin: 90px 0 23px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-live-feed h3 {
+        font: 700 23px/28px Chronicle Display A, Chronicle Display B, serif;
+        margin: 0 0 15px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-live-feed h3 {
+        font: 700 30px/30px Chronicle Display A, Chronicle Display B, serif;
+        margin: 0 0 20px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-live-feed h3 {
+        z-index: 11;
+    }
+    .shop-with-live-feed h3:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        top: 50%;
+        -ms-transform: translate(0%, -50%);
+        -webkit-transform: translate(0%, -50%);
+        -moz-transform: translate(0%, -50%);
+        -o-transform: translate(0%, -50%);
+        transform: translate(0%, -50%);
+        z-index: -1;
+    }
+    .shop-with-live-feed h3 span {
+        display: inline-block;
+        background-color: white;
+        padding: 0 87px 0 50px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-live-feed h3 span {
+        padding: 0 40px 0 0;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-live-feed h3 span.camera-icon {
+        position: absolute;
+        left: 50%;
+        top: -52px;
+        -ms-transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+        padding: 0;
+    }
+    .shop-with-live-feed h3 span.camera-icon img {
+        width: 44px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-live-feed h3 span.camera-icon {
+        position: absolute;
+        right: 50%;
+        top: -1px;
+        -ms-transform: translate(145px, 0);
+        -webkit-transform: translate(145px, 0);
+        -moz-transform: translate(145px, 0);
+        -o-transform: translate(145px, 0);
+        transform: translate(145px, 0);
+        padding: 0;
+    }
+    .shop-with-live-feed h3 span.camera-icon img {
+        width: 30px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-live-feed h3 span.camera-icon {
+        position: absolute;
+        right: 50%;
+        top: 0;
+        -ms-transform: translate(235px, 0);
+        -webkit-transform: translate(235px, 0);
+        -moz-transform: translate(235px, 0);
+        -o-transform: translate(235px, 0);
+        transform: translate(235px, 0);
+        padding: 0 50px 0 0;
+    }
+    .shop-with-live-feed h3 span.camera-icon img {
+        width: 30px;
+    }
+}
+
+.shop-with-live-feed .feedNav {
+    overflow: hidden;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-live-feed .feedNav {
+        margin: 20px -4% 0;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-live-feed .feedNav {
+        margin-top: 14px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-live-feed .feedNav {
+        margin: 18px -3.4% 0;
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .shop-with-live-feed .feedNav {
+        margin: 18px -4.73% 0;
+    }
+}
+
+.shop-with-live-feed .feedNav > div {
+    width: 50%;
+    float: left;
+    background-color: white;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-live-feed .feedNav > div {
+        font: 700 12px/14px "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        padding: 13px 0;
+        border: 1px solid black;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-live-feed .feedNav > div {
+        font: 700 11px/12px "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        padding: 13px 0;
+        border: 1px solid black;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-live-feed .feedNav > div {
+        font: 700 12px/14px "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        padding: 10px 0;
+        border: 1px solid #ccc;
+    }
+}
+
+.shop-with-live-feed .feedNav > div.active,
+.shop-with-live-feed .feedNav > div:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.shop-with-live-feed .live-feed-2 {
+    display: none;
+}
+
+.shop-with-live-feed .live-feed-1,
+.shop-with-live-feed .live-feed-2 {
+    overflow: hidden;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-live-feed .live-feed-1,
+    .shop-with-live-feed .live-feed-2 {
+        margin: 0 -4%;
+    }
+}
+
+@media (min-width: 61.3125em) and (max-width: 90em) {
+    .shop-with-live-feed .live-feed-1,
+    .shop-with-live-feed .live-feed-2 {
+        margin: 0 -3.4%;
+    }
+}
+
+@media (min-width: 90.0625em) {
+    .shop-with-live-feed .live-feed-1,
+    .shop-with-live-feed .live-feed-2 {
+        margin: 0 -1.6%;
+    }
+}
+
+.shop-with-live-feed .live-feed-1 > div,
+.shop-with-live-feed .live-feed-2 > div {
+    float: left;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-live-feed .live-feed-1 > div,
+    .shop-with-live-feed .live-feed-2 > div {
+        width: 33.3333333333%;
+        display: none;
+    }
+    .shop-with-live-feed .live-feed-1 > div:nth-child(-n+6),
+    .shop-with-live-feed .live-feed-2 > div:nth-child(-n+6) {
+        display: block;
+    }
+}
+
+@media (min-width: 42.5625em) {
+    .shop-with-live-feed .live-feed-1 > div,
+    .shop-with-live-feed .live-feed-2 > div {
+        width: 16.6666666666%;
+    }
+}
+
+.shop-with-live-feed .live-feed-1 > div img,
+.shop-with-live-feed .live-feed-2 > div img {
+    width: 100%;
+}
+
+.shop-with-live-feed .live-feed-1 > div a,
+.shop-with-live-feed .live-feed-2 > div a {
+    position: relative;
+    display: block;
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-live-feed .live-feed-1 > div a::after,
+    .shop-with-live-feed .live-feed-2 > div a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transition: opacity 0.2s ease-out;
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .shop-with-live-feed .live-feed-1 > div a:hover::after,
+    .shop-with-live-feed .live-feed-2 > div a:hover::after {
+        opacity: 1;
+    }
+}
+
+.shop-with-footer-signup {
+    text-align: center;
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with-footer-signup {
+        margin: 120px 0 0;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-footer-signup {
+        margin: 160px 0 0;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-footer-signup {
+        margin-bottom: 36px;
+    }
+}
+
+.shop-with-footer-signup a {
+    display: inline-block;
+    letter-spacing: 0px;
+    font: 700 14px/14px "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+    position: relative;
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-footer-signup a {
+        font: 700 11px/11px "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-footer-signup a {
+        font: 700 12px/12px "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    }
+}
+
+.shop-with-footer-signup a::before {
+    content: '';
+    background-image: url("http://assets.matchesfashion.com/content/mf/webassets/editorials/soft_launch_24Nov/images/svg/mf-icn-email.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 10px;
+    margin-right: 10px;
+    width: 17px;
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-footer-signup a::before {
+        height: 8px;
+        margin-right: 5px;
+        width: 15px;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-footer-signup a::before {
+        height: 9px;
+        margin-right: 6px;
+    }
+}
+
+.shop-with-footer-signup a::after {
+    content: '';
+    position: relative;
+    bottom: 4px;
+    background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-bottom: -5px;
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .shop-with-footer-signup a::after {
+        bottom: 4px;
+        width: 11px;
+        height: 11px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .ft__back-top {
+        margin-top: 65px !important;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .ft__back-top {
+        margin-top: 75px !important;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .share_btn {
+        display: none;
+    }
+    .share_btn_mob {
+        display: block;
+    }
+    .social-icons-bottom .edtl-share {
+        margin: 40px auto 0;
+        border: 0;
+    }
+    .social-icons-top {
+        display: none;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .edtl-share,
+    .share-icons {
+        display: block !important;
+    }
+    .share-icons a {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        margin-right: 20px;
+        background-color: #000;
+    }
+    .share-icons a:nth-of-type(4) {
+        margin-right: 0;
+    }
+    .share_btn,
+    .share_btn_mob {
+        display: none;
+    }
+    .social-icons-bottom .edtl-share,
+    .social-icons-bottom .share-icons {
+        margin-top: 50px;
+    }
+    .social-icons-bottom .edtl-share {
+        border-top: 1px solid black;
+    }
+    .social-icons-top {
+        margin-top: 30px;
+        margin-bottom: 56px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .social-icons-bottom {
+        border-top: 1px solid black;
+        margin-top: 40px;
+        padding-top: 25px;
+    }
+    .social-icons-top {
+        padding-top: 27px;
+        margin-bottom: 38px;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with .shop-with-style-report-d-and-m .bx-wrapper .bx-controls-direction a {
+        position: absolute;
+        top: 40% !important;
+        margin-top: -16px;
+        outline: 0;
+        width: 20px;
+        height: 35px;
+        text-indent: -9999px;
+        z-index: 9999;
+    }
+    .shop-with .shop-with-style-report-d-and-m .bx-wrapper .bx-controls-direction a.bx-next {
+        right: 0px;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-hero-arrow-right.svg") no-repeat 0px 0px;
+        background-size: contain;
+        background-position: top right;
+    }
+    .shop-with .shop-with-style-report-d-and-m .bx-wrapper .bx-controls-direction a.bx-prev {
+        left: 0px;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-hero-arrow-left.svg") no-repeat 0 0px;
+        background-size: contain;
+    }
+    .shop-with .bx-wrapper .bx-controls-direction a {
+        position: absolute !important;
+        top: 31.2% !important;
+        margin-top: -16px !important;
+        outline: 0 !important;
+        width: 20px !important;
+        height: 35px !important;
+        text-indent: -9999px !important;
+        z-index: 9999 !important;
+    }
+    .shop-with .bx-wrapper .bx-controls-direction a.bx-next {
+        right: 0px;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-hero-arrow-right.svg") no-repeat 0px 0px;
+        background-size: contain;
+        background-position: top right;
+    }
+    .shop-with .bx-wrapper .bx-controls-direction a.bx-prev {
+        left: 0px;
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-hero-arrow-left.svg") no-repeat 0 0px;
+        background-size: contain;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .header-wrapper {
+        z-index: 60000;
+    }
+}
+
+@media (min-width: 42.5625em) {
+    .editorial_wrapper {
+        float: none;
+    }
+}
+
+.ep-slider > div > span {
+    color: white;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    #ep-slider-content {
+        font: italic 300 14px/17px Chronicle Display A, Chronicle Display B, serif;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        margin-top: -35px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    #ep-slider-content {
+        font: italic 300 14px/17px Chronicle Display A, Chronicle Display B, serif;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        margin-top: -35px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    #ep-slider-content {
+        font: italic 300 14px/17px Chronicle Display A, Chronicle Display B, serif;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        margin-top: -35px;
+    }
+}
+
+#influences-content {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    margin-top: -88px;
+}
+
+#influences-content .shop-with-influences-name,
+#influences-content .shop-with-influences-title {
+    color: black !important;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .shop-with-influences-name,
+    .shop-with-influences-title {
+        color: black;
+    }
+}
+
+.view-more_container {
+    text-align: center;
+    margin-top: -20px;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .view-more_container {
+        display: none;
+    }
+}
+
+@media (min-width: 42.5625em) {
+    .view-more_container {
+        margin-top: 0px;
+    }
+}
+
+.view-more_container a.view-more {
+    display: inline-block;
+    background-color: black;
+    text-align: center;
+    border: 1px solid black;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .view-more_container a.view-more {
+        width: 170px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .view-more_container a.view-more {
+        width: auto;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        padding: 0 20px 0 25px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .view-more_container a.view-more {
+        width: auto;
+        margin-top: 20px;
+        margin-bottom: 0;
+        padding: 0 20px 0 25px;
+    }
+}
+
+.view-more_container a.view-more span {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 14px;
+    color: white;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .view-more_container a.view-more span {
+        font-size: 11px;
+        line-height: 11px;
+        padding: 13px 14px 13px 0;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .view-more_container a.view-more span {
+        font-size: 11px;
+        line-height: 11px;
+        padding: 13px 14px 13px 0;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .view-more_container a.view-more span {
+        padding: 8px 14px 8px 0;
+    }
+}
+
+.view-more_container a.view-more span:after {
+    content: "";
+    position: absolute;
+    background: transparent url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-white-right.svg") no-repeat scroll 0 0/contain;
+    right: 0;
+}
+
+@media (min-width: 0em) and (max-width: 42.5em) {
+    .view-more_container a.view-more span:after {
+        height: 11px;
+        width: 11px;
+        top: 13px;
+    }
+}
+
+@media (min-width: 42.5625em) and (max-width: 61.25em) {
+    .view-more_container a.view-more span:after {
+        height: 11px;
+        width: 11px;
+        top: 13px;
+    }
+}
+
+@media (min-width: 61.3125em) {
+    .view-more_container a.view-more span:after {
+        height: 13px;
+        width: 13px;
+        top: 8px;
+    }
+}
+
+.view-more_container a.view-more:hover {
+    background: white;
+}
+
+.view-more_container a.view-more:hover span {
+    color: black;
+}
+
+.view-more_container a.view-more:hover span:after {
+    background: transparent url("http://assets.matchesfashion.com/content/mf/images/svg/mf-icn-dropdown-right.svg") no-repeat scroll 0 0/contain;
+}
+
+.shop-with .bx-wrapper img {
+    display: block;
+}
+
+.bx-viewport .shop-with-style-report img {
+    display: inline-block !important;
+}
+
+.shop-with {
+    position: relative;
+    /**
+   * BxSlider v4.1.2 - Fully loaded, responsive content slider
+   * http://bxslider.com
+   *
+   * Written by: Steven Wanderski, 2014
+   * http://stevenwanderski.com
+   * (while drinking Belgian ales and listening to jazz)
+   *
+   * CEO and founder of bxCreative, LTD
+   * http://bxcreative.com
+   */
+    /** RESET AND LAYOUT
+  ===================================*/
+    /** THEME
+  ===================================*/
+    /* LOADER */
+    /* PAGER */
+    /* DIRECTION CONTROLS (NEXT / PREV) */
+    /* AUTO CONTROLS (START / STOP) */
+    /* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+    /* IMAGE CAPTIONS */
+}
+
+.shop-with .bx-wrapper {
+    position: relative;
+    margin: 0 auto 0px;
+    padding: 0;
+    *zoom: 1;
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with .bx-wrapper {
+        min-heigth: 200px !important;
+    }
+}
+
+.shop-with .bx-wrapper img {
+    max-width: 100%;
+    display: block;
+}
+
+.shop-with .bx-viewport {
+    width: 60%;
+}
+
+.shop-with .bx-wrapper .bx-viewport {
+    -moz-box-shadow: 0 0 5px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    border: solid #fff 5px;
+    left: -5px;
+    background: #fff;
+    /*fix other elements on the page moving (on Chrome)*/
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+}
+
+.shop-with .bx-wrapper .bx-pager,
+.shop-with .bx-wrapper .bx-controls-auto {
+    bottom: 0px;
+}
+
+.shop-with .bx-wrapper .bx-loading {
+    min-height: 50px;
+    background: url("http://assets.matchesfashion.com/content/mf/images/svg/bx_loader.gif") center center no-repeat #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    background-size: 25px;
+}
+
+.shop-with .bx-wrapper .bx-pager {
+    text-align: center;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px;
+}
+
+.shop-with .bx-wrapper .bx-pager .bx-pager-item,
+.shop-with .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+}
+
+.shop-with .bx-wrapper .bx-pager.bx-default-pager a {
+    background: #666;
+    text-indent: -9999px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    margin: 0 8px;
+    outline: 0;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.shop-with .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.shop-with .bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #000;
+}
+
+.shop-with .bx-wrapper .bx-prev {
+    left: 10px;
+    background: url("http://assets.matchesfashion.com/content/mf/images/svg/controls.png") no-repeat 0 -32px;
+}
+
+.shop-with .bx-wrapper .bx-next {
+    right: 10px;
+    background: url("http://assets.matchesfashion.com/content/mf/images/svg/controls.png") no-repeat -43px -32px;
+}
+
+.shop-with .bx-wrapper .bx-prev:hover {
+    background-position: 0 0;
+}
+
+.shop-with .bx-wrapper .bx-next:hover {
+    /* background-position: -43px 0; */
+    background-position: 0 0;
+}
+
+.shop-with .bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 40%;
+    margin-top: -16px;
+    outline: 0;
+    width: 20px;
+    height: 60px;
+    text-indent: -9999px;
+    z-index: 9999;
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with .bx-wrapper .bx-controls-direction a {
+        top: 50%;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.shop-with .bx-wrapper .bx-controls-direction a.disabled {
+    display: none;
+}
+
+.shop-with .bx-wrapper .bx-controls-auto {
+    text-align: center;
+}
+
+.shop-with .bx-wrapper .bx-controls-auto .bx-start {
+    display: block;
+    text-indent: -9999px;
+    width: 10px;
+    height: 11px;
+    outline: 0;
+    background: url("http://assets.matchesfashion.com/content/mf/images/svg/controls.png") -86px -11px no-repeat;
+    margin: 0 3px;
+}
+
+.shop-with .bx-wrapper .bx-controls-auto .bx-start:hover,
+.shop-with .bx-wrapper .bx-controls-auto .bx-start.active {
+    background-position: -86px 0;
+}
+
+.shop-with .bx-wrapper .bx-controls-auto .bx-stop {
+    display: block;
+    text-indent: -9999px;
+    width: 9px;
+    height: 11px;
+    outline: 0;
+    background: url(http://assets.matchesfashion.com/content/mf/images/svg/controls.png) -86px -44px no-repeat;
+    margin: 0 3px;
+}
+
+.shop-with .bx-wrapper .bx-controls-auto .bx-stop:hover,
+.shop-with .bx-wrapper .bx-controls-auto .bx-stop.active {
+    background-position: -86px -33px;
+}
+
+.shop-with .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    text-align: left;
+    width: 80%;
+}
+
+.shop-with .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+    right: 0;
+    width: 35px;
+}
+
+.shop-with .bx-wrapper .bx-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #666 \9;
+    background: rgba(80, 80, 80, 0.75);
+    width: 100%;
+}
+
+.shop-with .bx-wrapper .bx-caption span {
+    color: #fff;
+    font-family: Arial;
+    display: block;
+    font-size: .85em;
+    padding: 10px;
+}
+
+.shop-with .bx-wrapper .bx-pager,
+.shop-with .bx-wrapper .bx-controls-auto {
+    width: 200px;
+    margin: 10px auto;
+}
+
+.shop-with .editorial-prod__img {
+    margin-bottom: 0;
+}
+
+.shop-with .editorial-prod__img img {
+    max-width: 100%;
+}
+
+.shop-with .bx-wrapper .bx-viewport {
+    background: none;
+    border: 0 none;
+    box-shadow: none;
+    left: 0;
+}
+
+.shop-with .bx-wrapper .bx-prev {
+    background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-pdp-mobile-arrow-left.svg") no-repeat 0px 0px;
+    background-size: contain;
+    left: -5%;
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with .bx-wrapper .bx-prev {
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-pdp-small-arrow-left.svg") no-repeat 0px 0px;
+    }
+}
+
+@media (min-width: 42.5625em) {
+    .shop-with .bx-wrapper .bx-prev {
+        left: 0%;
+    }
+}
+
+.shop-with .bx-wrapper .bx-next {
+    background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-pdp-mobile-arrow-right.svg") no-repeat 0px 0px;
+    background-size: contain;
+    right: -5%;
+}
+
+@media (min-width: 61.3125em) {
+    .shop-with .bx-wrapper .bx-next {
+        background: url("http://assets.matchesfashion.com/content/mf/images/svg/mf-pdp-small-arrow-right.svg") no-repeat 0px 0px;
+    }
+}
+
+@media (min-width: 0em) and (max-width: 61.25em) {
+    .shop-with .bx-wrapper .bx-next {
+        right: 0;
+    }
+    .shop-with .bx-wrapper .bx-prev {
+        left: 0;
+    }
+    .shop-with .bx-wrapper .bx-pager,
+    .shop-with .bx-wrapper .bx-controls-auto {
+        left: 0px;
+    }
+    .bx-wrapper .bx-pager,
+    .shop-with .bx-wrapper .bx-controls-auto {
+        margin: -5px auto 10px !important;
+    }
+}
+
+@media (max-width: 42.5625em) and (min-width: 0){
+   .shop-with2 h2 {
+    border-bottom: none;
+    font: 700 22px/22px "Chronicle Display A", "Chronicle Display B", serif;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 61.3125em ) and (min-width: 42.5625em){
+  .shop-with2 h2 {
+    padding-bottom: 15px;
+  }
+     .shop-with2 h2{
+    font: 700 24px/24px "Chronicle Display A", "Chronicle Display B", serif;
+  }
+      
+}
+@media (min-width: 61.3125em) {
+  .shop-with2 .shop-with-first-paragraph {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+    .shop-with2 h2{
+    font: 700 24px/24px "Chronicle Display A", "Chronicle Display B", serif;
+  }
+}
+
+
+.shop-with2 {
+  margin-top: 60px;
+}
+
+
+/* CUSTOM */
+
+
+/* The Coveteur Specific */
+
+
+@media (min-width: 681px) and (max-width: 745px) {
+    .shop-with-this-month > div > div > div > img {
+        margin: 0px auto 7px;
+        width: 88px;
+    }
+}
+
+
+/* END The Coveteur Specific */
+
+
+/* END CUSTOM */
+
+
+/* FOR DEVELOPMENT ONLY */
+
+
+/*# sourceMappingURL=styles.css.map */
