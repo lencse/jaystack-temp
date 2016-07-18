@@ -1,0 +1,529 @@
+﻿<!-- SHOP BY -->
+<script>
+// Picture element HTML shim|v it for old IE (pairs with Picturefill.js)
+document.createElement("picture");
+</script>
+<script id="shopByProdTemplate" type="text/x-handlebars-template">
+    {{#each products}}
+    <div>
+        <a href="{{url}}" title="{{designerData.name}} {{name}}">
+            <figure>
+                <img src="//assetsprx.matchesfashion.com/img/product/{{code}}_1_zoom.jpg" alt="{{designerData.name}} {{name}}">
+                <figcaption>
+                    <span class="mf-shopby__prod__brand">{{designerData.name}}</span>
+                    <span class="mf-shopby__prod__desc">{{name}}</span>
+                    <span class="mf-shopby__prod__price">{{priceData.formattedValue}}</span>
+                    <span class="mf-shopby__section__cta">SHOP NOW</span>
+                </figcaption>
+            </figure>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<script id="shopByCatTemplate" type="text/x-handlebars-template">
+    {{#each products}}
+    <div>
+        <a href="{{url}}" title="{{designer.name}} {{name}}">
+            <figure>
+                <!-- <img src="{{primaryImageMap.medium.url}}" alt="{{designer.name}} {{name}}"> -->
+                <img src="//assetsprx.matchesfashion.com/img/product/{{code}}_{{../imgType}}_medium.jpg" alt="{{designer.name}} {{name}}">
+                <figcaption>
+                    <span class="mf-shopby__prod__brand">{{designer.name}}</span>
+                    <span class="mf-shopby__prod__desc">{{name}}</span>
+                    <span class="mf-shopby__prod__price">{{price.formattedValue}}</span>
+                    <span class="mf-shopby__section__cta">SHOP NOW</span>
+                </figcaption>
+            </figure>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<div class="mf-shopby">
+    <!-- LEFT NAVIGATION -->
+    <aside class="mf-shopby__nav" id="mf-shopby__nav">
+        <div id="mf-shopby__nav--sticky">
+            <div class="mf-shopby__nav__header">
+                <h3>SHOP BY...</h3>
+                <div class="mf-shopby__stroke"></div>
+            </div>
+            <ul class="mf-shopby__nav__main">
+                <li>
+                    <a href="/womens/digital-trunk-show">DIGITAL TRUNK SHOWS</a>
+                    <ul class="mf-shopby__nav__sub">
+                        <li><a href="/womens/digital-trunk-show">View All</a></li>
+                        <li><a href="/womens/digital-trunk-show?designer=altuzarra">Altuzarra</a></li>
+                        <li><a href="/womens/digital-trunk-show?designer=emilia-wickstead">Emilia Wickstead</a></li>
+                        <li><a href="/womens/digital-trunk-show?designer=jwanderson">J.W.Anderson</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/womens/shop-with">SHOP WITH...</a>
+                    <ul class="mf-shopby__nav__sub">
+                        <li><a href="/womens/shop-with">View All</a></li>
+                        <li><a href="/womens/shop-with/jayne-min/home">Jayne Min</a></li>
+                        <li><a href="/womens/shop-with/sincerely-jules/home">Sincerely, Jules </a></li>
+                        <li><a href="/womens/shop-with/the-coveteur/home">The Coveteur</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/womens/studios-landing">STUDIOS</a>
+                    <ul class="mf-shopby__nav__sub">
+                        <li><a href="/womens/studios-landing">View All</a></li>
+                        <li><a href="/womens/activewear-studio">Activewear Studio</a></li>
+                        <li><a href="/womens/vacation-studio">Vacation Studio</a></li>
+                        <li><a href="/womens/event-dressing-studio">Event Dressing Studio</a></li>
+                        <li><a href="/womens/designers-to-know-aw16">Designers To Know Studio</a></li>
+                        <li><a href="/womens/essentials-studio">Essentials Studio</a></li>
+                        <li><a href="/womens/denim-studio">Denim Studio</a></li>
+                        <li><a href="/womens/gifts-studio">The Gift Studio</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/womens/trend-hub/trend-report-aw16">THE TREND HUB: PRE&#8209;AW16</a>
+                    <ul class="mf-shopby__nav__sub">
+                        <li><a href="/womens/trend-hub/trend-report-aw16">View All</a></li>
+                        <li><a href="/womens/trend-hub/pre-aw16/pretty-feminine-aw16">Pretty Feminine</a></li>
+                        <li><a href="/womens/trend-hub/pre-aw16/whimsical-aw16">Whimsical</a></li>
+                        <li><a href="/womens/trend-hub/pre-aw16/elevated-staples-aw16">Elevated Essentials</a></li>
+                        <li><a href="/womens/trend-hub/pre-aw16/folk-icon-aw16">Folk Icon</a></li>
+                        <li><a href="/womens/trend-hub/pre-aw16/urban-warrior-aw16">Military Mood</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="mf-shopby__nav__main">
+                <li>
+                    <a href="/womens/lists/exclusives">EXCLUSIVES</a>
+                </li>
+                <li>
+                    <a href="/womens/lists/coming-soon-aw16">COMING SOON</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!-- /LEFT NAVIGATION -->
+    <!-- MAIN CONTENT -->
+    <main class="mf-shopby__content">
+        <div class="mf-shopby__content__video">
+            <video id="mf-shopby__video" class="mf-shopby__video" width="100%" height="initial" autoplay="true" loop="true" poster="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/video.jpg">
+                <source src="//assets.matchesfashion.com/content/mf/ShopBy/v2/video/ShopBy_v3.mp4.mp4" type="video/mp4">
+                <source src="//assets.matchesfashion.com/content/mf/ShopBy/v2/video/ShopBy_v3.webmhd.webm" type="video/webm">
+                <source src="//assets.matchesfashion.com/content/mf/ShopBy/v2/video/ShopBy_v3.oggtheora.ogv" type="video/ogg">  
+            </video>
+            <img class="mf-shopby__video__img" src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/video-tab.jpg" alt="">
+            <header class="mf-shopby__header">
+                <h2>SHOP BY...</h2>
+                <div class="mf-shopby__stroke"></div>
+                <p class="mf-shopby__header__copy" id="sb-header-copy">From exclusive collaborations with key designers to cult fashion-insider edits and the latest trends, Shop By… is your window to a bespoke shopping experience.</p>
+            </header>
+        </div>
+        <div class="mf-shopby__content__notvideo">
+            <!-- BREADCRUMB DROP DOWN (mobile) -->
+            <div class="mf-shopby__breadcrumb__mob__wrapper">
+                <div class="mf-shopby__breadcrumb__mob">
+                    <select data-mf-select id="mf-shopby__filter" name="mf-shopby__filter">
+                        <option value="" disabled="disabled" selected="selected">SELECT</option>
+                        <option value="/womens/digital-trunk-show">DIGITAL TRUNK SHOWS</option>
+                        <option value="/womens/shop-with">SHOP WITH...</option>
+                        <option value="/womens/studios-landing">STUDIOS</option>
+                        <option value="/womens/trend-hub/trend-report-aw16">THE TREND HUB: PRE-AW16</option>
+                        <option value="/womens/lists/exclusives">EXCLUSIVES</option>
+                        <option value="/womens/lists/coming-soon-aw16">COMING SOON</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /BREADCRUMB DROP DOWN (mobile) -->
+            <!-- BREADCRUMB -->
+            <ul class="mf-shopby__breadcrumb">
+                <li><a href="/womens/digital-trunk-show" title="DIGITAL TRUNK SHOWS">DIGITAL TRUNK SHOWS</a></li>
+                <li><a href="/womens/shop-with" title="SHOP WITH...">SHOP WITH...</a></li>
+                <li><a href="/womens/studios-landing" title="STUDIOS">STUDIOS</a></li>
+                <li><a href="/womens/trend-hub/trend-report-aw16" title="THE TREND HUB">THE TREND HUB</a></li>
+                <li><a href="/womens/lists/exclusives" title="EXCLUSIVES">EXCLUSIVES</a></li>
+                <li><a href="/womens/lists/coming-soon-aw16" title="COMING SOON">COMING SOON</a></li>
+            </ul>
+            <!-- /BREADCRUMB -->
+            <!-- DIGITAL TRUNKSHOWS -->
+            <section class="mf-shopby__section mf-shopby__dt">
+                <header>
+                    <h3>DIGITAL TRUNK SHOWS</h3>
+                    <p>
+                        Welcome to Digital Trunk Shows – your first chance to see and shop exclusive collaborations and the latest collections from key designers at MATCHESFASHION.COM. Watch as the designers discuss their collections and click on the items you wish to shop.
+                    </p>
+                </header>
+                <a class="mf-shopby__section__cta" href="/womens/digital-trunk-show">View All</a>
+                <div class="mf-shopby__dt__car">
+                    <div>
+                        <a href="/womens/digital-trunk-show?designer=altuzarra" title="ALTUZARRA">
+                            <figure>
+                                <img src="//media.matchesfashion.com/apps/DigitalTrunkShow/altuzarra_ImageURL_HypMlSA_DESIGNER-PORTRAIT-IMAGE.jpg" alt="ALTUZARRA">
+                                <figcaption>
+                                    <span>ALTUZARRA</span>
+                                    <span class="mf-shopby__section__cta">SHOP NOW</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/womens/digital-trunk-show?designer=emilia-wickstead" title="EMILIA WICKSTEAD">
+                            <figure>
+                                <img src="//media.matchesfashion.com/apps/DigitalTrunkShow/emilia-wickstead_ImageURL_B1jc2S0_DESIGNER-PORTRAIT-IMAGE.jpg" alt="EMILIA WICKSTEAD">
+                                <figcaption>
+                                    <span>EMILIA WICKSTEAD</span>
+                                    <span class="mf-shopby__section__cta">SHOP NOW</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/womens/digital-trunk-show?designer=jwanderson" title="J.W. ANDERSON">
+                            <figure>
+                                <img src="//media.matchesfashion.com/apps/DigitalTrunkShow/jwanderson_ImageURL_rJQZadXM_DESIGNER-PORTRAIT-IMAGE-v3.jpg" alt="J.W. ANDERSON">
+                                <figcaption>
+                                    <span>J.W. ANDERSON</span>
+                                    <span class="mf-shopby__section__cta">SHOP NOW</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- /DIGITAL TRUNKSHOWS -->
+            <!-- SHOP WITH -->
+            <section class="mf-shopby__section  mf-shopby__sw">
+                <header>
+                    <h3>SHOP WITH...</h3>
+                    <p>Each month, MATCHESFASHION.COM works with a selected fashion insider or style influencer to curate the key looks of the moment as part of our Shop With… series. In this space, each featured stylist exclusively exhibits their hand-picked edit of hero pieces from our collections, creating 12 complete looks that showcase their unique style aesthetic. Look no further for fresh outfit inspiration.</p>
+                </header>
+                <a class="mf-shopby__section__cta" href="/womens/shop-with">View All</a>
+                <div class="mf-shopby__sw__thumbs__wrapper">
+                    <div class="mf-shopby__sw__thumbs">
+                        <a href="/womens/shop-with/jayne-min/home" title="Jayne Min">
+                            <figure>
+                                <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/sw-thumb-min.jpg" alt="Jayne Min" />
+                                <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/sw-thumb-min-hover.jpg" alt="Jayne Min"/>
+                                <figcaption>
+                                    <span>Jayne Min</span>
+                                    <span>CONSULTANT</span>
+                                    <span>& stylist</span>
+                                    <span class="mf-shopby__section__cta">SHOP THE LOOKS</span>
+                                    <p>
+                                        LA-based creative consultant and stylist Jayne Min epitomises effortless style. With an oversized yet minimalist aesthetic, her approach to fashion is refreshingly practical: ‘If I can’t eat or sleep or work in it comfortably, I’m not interested,’ she says.
+                                    </p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <a href="/womens/shop-with/sincerely-jules/home" title="Sincerely Jules">
+                            <figure>
+                                <img src="//assets.matchesfashion.com/content/mf/Shop-with/AW16-1/images-jun/person-0-active.jpg" alt="Sincerely Jules">
+                                <img src="//assets.matchesfashion.com/content/mf/Shop-with/AW16-1/images-jun/person-0.jpg" alt="Sincerely Jules">
+                                <figcaption>
+                                    <span>Sincerely, Jules</span>
+                                    <span>BLOGGER AT</span>
+                                    <span>SINCERELY, JULES</span>
+                                    <span class="mf-shopby__section__cta">SHOP THE LOOKS</span>
+                                    <p>
+                                        Julie Sariñana is an LA-based blogger and founder of online website Sincerely, Jules – a snapshot of Sariñana’s style, travel adventures and home life. She describes her look as ‘California laid-back; it’s very easy, versatile, and comfortable.’
+                                    </p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <a href="/womens/shop-with/the-coveteur/home" title="The Coveteur">
+                            <figure>
+                                <img src="//assets.matchesfashion.com/content/mf/Shop-with/SS16-3/images-apr/person-0-active.jpg" alt="The Coveteur" />
+                                <img src="//assets.matchesfashion.com/content/mf/Shop-with/SS16-3/images-apr/person-0.jpg" alt="The Coveteur"/>
+                                <figcaption>
+                                <span>The Coveteur</span>
+                                <span>BEHIND-THE-SCENES</span>
+                                <span>STYLE SITE</span>
+                                <span class="mf-shopby__section__cta">SHOP THE LOOKS</span>
+                                <p>
+                                    The Coveteur is the website that reveals the wardrobes of the world’s most stylish people. It was founded by Stephanie Mark, Jake Rosenberg and Erin Kleinberg as ‘a passion project to show the lives and personal style of the behind-the-scenes heroes of the fashion industry – the people whose opinions and stories shaped the looks we saw on the runway and red carpet,’ says Mark.
+                                </p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="mf-shopby__sw__thumbs-arrow" id="sw-thumbs-arrow"></div>
+                    </div>
+                    <div class="mf-shopby__sw__copy">
+                        <p>
+                            LA-based creative consultant and stylist Jayne Min epitomises effortless style. With an oversized yet minimalist aesthetic, her approach to fashion is refreshingly practical: ‘If I can’t eat or sleep or work in it comfortably, I’m not interested,’ she says.
+                        </p>
+                        <p>
+                            Julie Sariñana is an LA-based blogger and founder of online website Sincerely, Jules – a snapshot of Sariñana’s style, travel adventures and home life. She describes her look as ‘California laid-back; it’s very easy, versatile, and comfortable.’
+                        </p>
+                        <p>
+                            <i>The Coveteur</i> is the website that reveals the wardrobes of the world’s most stylish people. It was founded by Stephanie Mark, Jake Rosenberg and Erin Kleinberg as ‘a passion project to show the lives and personal style of the behind-the-scenes heroes of the fashion industry – the people whose opinions and stories shaped the looks we saw on the runway and red carpet,’ says Mark.
+                        </p>
+                    </div>
+                </div>
+                <div class="mf-shopby__sw__look">
+                    <figure class="active">
+                        <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/sw-look-min.jpg" alt="Styled by Jayne Min - Look 7/12" />
+                        <figcaption>
+                            <span>Styled by Jayne Min</span>
+                            <span>Look 7/12</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/sw-look-jules.jpg" alt="Styled by Sincerely Jules - Look 1/12" />
+                        <figcaption>
+                            <span>Styled by Sincerely Jules</span>
+                            <span>Look 1/12</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/sw-look-coveteur.jpg" alt="Styled by The Coveteur - Look 1/12" />
+                        <figcaption>
+                            <span>Styled by The Coveteur</span>
+                            <span>Look 1/12</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <!-- /SHOP WITH -->
+            <!-- STUDIOS -->
+            <section class="mf-shopby__section mf-shopby__st">
+                <header>
+                    <h3>STUDIOS</h3>
+                    <p>Explore our expertly curated studios: discover an edit for every aspect of your life, from elevated essentials and activewear pieces to gifts and event dressing.</p>
+                </header>
+                <a class="mf-shopby__section__cta" href="/womens/studios-landing">VIEW AND SHOP ALL STUDIOS</a>
+                <div class="mf-shopby__st__cat__mob">
+                    <select data-mf-select id="mf-shopby__st__filter" name="mf-shopby__st__filter">
+                        <option value="" disabled="disabled" selected="selected">SELECT STUDIO</option>
+                        <option value="/womens/activewear-studio">ACTIVEWEAR STUDIO</option>
+                        <option value="/womens/vacation-studio">VACATION STUDIO</option>
+                        <option value="/womens/event-dressing-studio">EVENT DRESSING STUDIO</option>
+                        <option value="/womens/designers-to-know-aw16">DESIGNERS TO KNOW STUDIO</option>
+                        <option value="/womens/essentials-studio">ESSENTIALS STUDIO</option>
+                        <option value="/womens/denim-studio">DENIM STUDIO</option>
+                        <option value="/womens/gifts-studio">THE GIFT STUDIO</option>
+                    </select>
+                </div>
+                <div class="mf-shopby__st__data__wrapper">
+                    <div class="mf-shopby__st__data">
+                        <a href="/womens/activewear-studio" title="ACTIVEWEAR STUDIO">
+                            <figure>
+                                <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/st-active.jpg" alt="ACTIVEWEAR STUDIO" />
+                                <figcaption>
+                                <span>ACTIVEWEAR STUDIO</span>
+                                <span class="mf-shopby__section__cta">SHOP ACTIVEWEAR STUDIO</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <a href="/womens/vacation-studio" title="VACATION STUDIO">
+                            <figure>
+                                <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/st-vacation.jpg" alt="VACATION STUDIO" />
+                                <figcaption>
+                                <span>VACATION STUDIO</span>
+                                <span class="mf-shopby__section__cta">SHOP VACATION STUDIO</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <a href="/womens/event-dressing-studio" title="EVENT DRESSING STUDIO">
+                            <figure>
+                                <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/st-event.jpg" alt="EVENT DRESSING STUDIO" />
+                                <figcaption>
+                                <span>EVENT DRESSING STUDIO</span>
+                                <span class="mf-shopby__section__cta">SHOP EVENT DRESSING STUDIO</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+
+                        <a href="/womens/designers-to-know-aw16" title="DESIGNERS TO KNOW STUDIO">
+                            <figure>
+                                <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/st-designers.jpg" alt="DESIGNERS TO KNOW STUDIO" />
+                                <figcaption>
+                                <span>DESIGNERS TO KNOW STUDIO</span>
+                                <span class="mf-shopby__section__cta">SHOP DESIGNERS TO KNOW STUDIO</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <a href="/womens/essentials-studio" title="ESSENTIALS STUDIO">
+                            <figure>
+                                <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/st-essentials.jpg" alt="ESSENTIALS STUDIO" />
+                                <figcaption>
+                                <span>ESSENTIALS STUDIO</span>
+                                <span class="mf-shopby__section__cta">SHOP ESSENTIALS STUDIO</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <a href="/womens/denim-studio" title="DENIM STUDIO">
+                            <figure>
+                                <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/st-denim.jpg" alt="DENIM STUDIO" />
+                                <figcaption>
+                                <span>DENIM STUDIO</span>
+                                <span class="mf-shopby__section__cta">SHOP DENIM STUDIO</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <a href="/womens/gifts-studio" title="THE GIFT STUDIO">
+                            <figure>
+                                <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/st-gift.jpg" alt="THE GIFT STUDIO" />
+                                <figcaption>
+                                <span>THE GIFT STUDIO</span>
+                                <span class="mf-shopby__section__cta">SHOP THE GIFT STUDIO</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <div class="mf-shopby__st__cat__wrapper">
+                    <ul class="mf-shopby__st__cat">
+                        <li><a href="/womens/activewear-studio">ACTIVEWEAR STUDIO</a></li>
+                        <li><a href="/womens/vacation-studio">VACATION STUDIO</a></li>
+                        <li><a href="/womens/event-dressing-studio">EVENT DRESSING STUDIO</a></li>
+                        <li><a href="/womens/designers-to-know-aw16">DESIGNERS TO KNOW STUDIO</a></li>
+                        <li><a href="/womens/essentials-studio">ESSENTIALS STUDIO</a></li>
+                        <li><a href="/womens/denim-studio">DENIM STUDIO</a></li>
+                        <li><a href="/womens/gifts-studio">THE GIFT STUDIO</a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- /STUDIOS -->
+            <!-- TREND HUB -->
+            <section class="mf-shopby__section mf-shopby__th">
+                <header>
+                    <h3>THE TREND HUB: PRE&#8209;AW16</h3>
+                    <p>With new silhouettes, vivid colour and unexpected detailing, this season offers an eclectic set of style muses. From refined elegance to statement designs, what will inspire you this season?</p>
+                </header>
+                <a class="mf-shopby__section__cta" href="/womens/trend-hub/trend-report-aw16">VIEW AND SHOP THE TRENDS</a>
+                <div class="mf-shopby__th__cat__mob">
+                    <select data-mf-select id="mf-shopby__th__filter" name="mf-shopby__th__filter">
+                        <option value="" disabled="disabled" selected="selected">SELECT TREND</option>
+                        <option value="/womens/trend-hub/pre-aw16/pretty-feminine-aw16">PRETTY FEMININE</option>
+                        <option value="/womens/trend-hub/pre-aw16/whimsical-aw16">WHIMSICAL</option>
+                        <option value="/womens/trend-hub/pre-aw16/elevated-staples-aw16">ELEVATED ESSENTIALS</option>
+                        <option value="/womens/trend-hub/pre-aw16/folk-icon-aw16">FOLK ICON</option>
+                        <option value="/womens/trend-hub/pre-aw16/urban-warrior-aw16">MILITARY MOOD</option>
+                    </select>
+                </div>
+                <ul class="mf-shopby__th__cat">
+                    <li class="active"><a href="javascript:void(0)" title="PRETTY FEMININE">PRETTY FEMININE</a></li>
+                    <li><a href="javascript:void(0)" title="WHIMSICAL">WHIMSICAL</a></li>
+                    <li><a href="javascript:void(0)" title="ELEVATED ESSENTIALS">ELEVATED ESSENTIALS</a></li>
+                    <li><a href="javascript:void(0)" title="FOLK ICON">FOLK ICON</a></li>
+                    <li><a href="javascript:void(0)" title="MILITARY MOOD">MILITARY MOOD</a></li>
+                </ul>
+                <div class="mf-shopby__th__car">
+                    <div>
+                        <a href="/womens/trend-hub/pre-aw16/pretty-feminine-aw16" title="PRETTY FEMININE">
+                            <figure>
+                                <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/th-pretty.jpg" alt="PRETTY FEMININE">
+                                <figcaption>
+                                    <span>PRETTY FEMININE</span>
+                                    <span class="mf-shopby__section__cta">SHOP NOW</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/womens/trend-hub/pre-aw16/whimsical-aw16" title="WHIMSICAL">
+                            <figure>
+                                <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/th-whimsical.jpg" alt="WHIMSICAL">
+                                <figcaption>
+                                    <span>WHIMSICAL</span>
+                                    <span class="mf-shopby__section__cta">SHOP NOW</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/womens/trend-hub/pre-aw16/elevated-staples-aw16" title="ELEVATED ESSENTIALS">
+                            <figure>
+                                <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/th-essentials.jpg" alt="ELEVATED ESSENTIALS">
+                                <figcaption>
+                                    <span>ELEVATED ESSENTIALS</span>
+                                    <span class="mf-shopby__section__cta">SHOP NOW</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/womens/trend-hub/pre-aw16/folk-icon-aw16" title="FOLK ICON">
+                            <figure>
+                                <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/th-folk.jpg" alt="FOLK ICON">
+                                <figcaption>
+                                    <span>FOLK ICON</span>
+                                    <span class="mf-shopby__section__cta">SHOP NOW</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/womens/trend-hub/pre-aw16/urban-warrior-aw16" title="MILITARY MOOD">
+                            <figure>
+                                <img src="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/th-military.jpg" alt="MILITARY MOOD">
+                                <figcaption>
+                                    <span>MILITARY MOOD</span>
+                                    <span class="mf-shopby__section__cta">SHOP NOW</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- /TREND HUB -->
+            <!-- EXCLUSIVES: DESIGNER -->
+            <section class="mf-shopby__section mf-shopby__ex">
+                <header>
+                    <h3>EXCLUSIVES: ALTUZARRA</h3>
+                    <p>Shop New York designer Joseph Altuzarra’s exclusive five-piece collection of shirtdresses for MATCHESFASHION.COM – cult pieces you won’t find anywhere else.</p>
+                </header>
+                <a class="mf-shopby__section__cta" href="/womens/designers/altuzarra">SHOP ALTUZARRA EXCLUSIVES</a>
+                <div class="mf-shopby__ex__container">
+                    <div class="mf-shopby__ex__promo">
+                        <figure>
+                            <picture>
+                                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                <source srcset="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/ex-1.jpg" media="(min-width: 0px)">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img data-original="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/ex-1.jpg" alt="EXCLUSIVES: ALTUZARRA">
+                            </picture>
+                        </figure>
+                        <figure>
+                            <picture>
+                                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                <source srcset="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/ex-2.jpg" media="(min-width: 0px)">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img data-original="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/ex-2.jpg" alt="EXCLUSIVES: ALTUZARRA">
+                            </picture>
+                        </figure>
+                        <figure>
+                            <picture>
+                                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                <source srcset="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/ex-3.jpg" media="(min-width: 0px)">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img data-original="//assets.matchesfashion.com/content/mf/ShopBy/v2/img/prd/ex-3.jpg" alt="EXCLUSIVES: ALTUZARRA">
+                            </picture>
+                        </figure>
+                    </div>
+                    <div class="mf-shopby__ex__car" data-mf-products="1050835,1050832,1050833"></div>
+                </div>
+            </section>
+            <!-- /EXCLUSIVES: DESIGNER -->
+            <!-- COMING SOON -->
+            <section class="mf-shopby__section mf-shopby__prods">
+                <header>
+                    <h3>COMING SOON</h3>
+                    <p>Be the first to shop the season’s key pieces. Add coming soon items to your  wishlist and we’ll email you the minute they arrive, so you’ll never miss out on the latest arrivals.</p>
+                </header>
+                <a class="mf-shopby__section__cta" href="/womens/lists/coming-soon-aw16">VIEW AND SIGN UP FOR UPDATES NOW</a>
+                <div class="mf-shopby__prods__car" data-mf-category="/womens/lists/coming-soon-aw16"></div>
+                <a class="mf-shopby__section__cta mf-shopby__loadmore" href="javascript:void(0)">Load more</a>
+                <a class="mf-shopby__section__cta mf-shopby__showless" href="javascript:void(0)">Show less</a>
+                <a class="mf-shopby__section__cta" href="/womens/lists/coming-soon-aw16">VIEW AND SIGN UP FOR UPDATES NOW</a>
+            </section>
+            <!-- /COMING SOON -->
+            <!-- SOCIAL -->
+            <div class="mf-shopby__social">
+                <a class="icon-facebook" href="" onclick="javascript:window.open(this.href,'facebook_share', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
+                <a class="icon-twitter" data-lang="en" data-dnt="true" data-count="none" data-text="MATCHESFASHION.COM" data-url="" href="javascript:void(window.open('https://twitter.com/share','twitter_share', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'));"></a>
+                <a class="icon-pinterest" href="" target="_blank" onclick="javascript:window.open(this.href,'pininterest_share', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
+                <a class="icon-google" href="" onclick="javascript:window.open(this.href,'googleplus_share', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
+            </div>
+            <!-- /SOCIAL -->
+        </div>
+    </main>
+    <!-- /MAIN CONTENT -->
+</div>
